@@ -29,6 +29,7 @@ vendor
 lib-cov
 coverage
 nbproject
+cache
 temp
 tmp
 
