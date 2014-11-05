@@ -4,6 +4,7 @@ export NVM_DIR="/home/charlike/.nvm"
 ############
 # ALIASES ##
 ############
+alias rm="rm -rf"
 alias mkdir="mkdir -p"
 alias myip="curl http://ipecho.net/plain; echo"
 alias ..="cd .."
