@@ -1,6 +1,9 @@
 export NVM_DIR="/home/charlike/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+nvm use 0.11
+cd ~/
+
 ############
 # ALIASES ##
 ############
@@ -20,4 +23,6 @@ alias gc="git commit -m"
 alias gac="ga -A && gc"
 alias ntgac="nt && gac"
 alias gitpush="git push"
-alias gap="ntgac 'updt' && gitpush"
+alias gap="gac 'updt' && gitpush"
+alias ntgap="ntgac 'updt' && gitpush"
+alias gsp="gitclone tunnckoCore/coreflow-templates"
