@@ -21,6 +21,7 @@
 *.idea
 
 # Always-ignore dirs and files
+build
 _gh_pages
 node_modules
 bower_components
