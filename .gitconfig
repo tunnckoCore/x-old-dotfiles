@@ -5,7 +5,7 @@
 	default = simple
 
 [alias]
-        tac = !npm test && git add -A && git commit -m
+    tac = !npm test && git add -A && git commit -m
 	ac = !git add -A && git commit -m
 	tr = !npm test && git release
 	gct = !gitclone tunnckoCore/coreflow-templates

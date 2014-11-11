@@ -14,5 +14,5 @@ insert_final_newline = true
 indent_size = 4
 
 [Makefile]
-indent_size = 1
 indent_style = tab
+indent_size = 2

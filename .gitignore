@@ -17,11 +17,10 @@
 *.vi
 *.yo-rc.json
 *.zip
-*.coveralls.yml
 *.idea
+*.coveralls.yml
 
 # Always-ignore dirs and files
-build
 _gh_pages
 node_modules
 bower_components
@@ -36,3 +35,5 @@ tmp
 
 npm-debug.log
 Thumbs.db
+
+build
