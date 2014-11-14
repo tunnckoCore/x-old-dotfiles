@@ -29,7 +29,7 @@ alias free="free -mt"
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 
 # Git shortcuts #
-# ###########################
+# ###############
 
 #1: undo
 alias gback="git reset HEAD^ --hard"
