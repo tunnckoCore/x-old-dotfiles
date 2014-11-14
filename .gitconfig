@@ -1,11 +1,10 @@
 [user]
-	email = mamemto_100@mail.bg
-	name = tunnckoCore
+  email = mamemto_100@mail.bg
+  name = Charlike Mike Reagent
+  user = tunnckoCore
+
 [push]
-	default = simple
+  default = simple
 
 [alias]
-    tac = !npm test && git add -A && git commit -m
-	ac = !git add -A && git commit -m
-	tr = !npm test && git release
-	gct = !gitclone tunnckoCore/coreflow-templates
+  back = reset HEAD^ --hard

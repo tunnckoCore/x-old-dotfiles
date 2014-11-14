@@ -1,5 +1,5 @@
 # Always-ignore dirs #
-######################
+# ####################
 _gh_pages
 node_modules
 bower_components
@@ -14,7 +14,7 @@ temp
 tmp
 
 # Packages #
-############
+# ##########
 *.7z
 *.dmg
 *.gz
@@ -25,7 +25,7 @@ tmp
 *.zip
 
 # OS, Logs and databases #
-##########################
+# #########################
 *.pid
 *.dat
 *.log
@@ -35,7 +35,7 @@ tmp
 ~*
 
 # Another files #
-#################
+# ###############
 .DS_Store
 Thumbs.db
 npm-debug.log
