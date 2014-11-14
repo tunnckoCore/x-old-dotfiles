@@ -1,6 +1,7 @@
 # dotfiles
 > Dotfiles for repositories and Linux. Workflow.
 
+### todos
 - [ ] jscs
 - [ ] jshint update - felix code style
 - [ ] editorconfig update
