@@ -1,3 +1,5 @@
+// todo again, update - felix node-style, expressjs, mochajs
+// todo jscs integration
 {
   "maxerr"        : 10,
   "indent"        : 2,
