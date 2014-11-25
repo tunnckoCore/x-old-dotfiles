@@ -27,3 +27,7 @@ indent_size = 4
 [Makefile]
 indent_size = 2
 indent_style = tab
+
+[.*rc]
+indent_size = 2
+indent_style = space

@@ -4,6 +4,7 @@
 # Released under the MIT license.
 #
 
+JSCS      = node_modules/.bin/jscs
 MOCHA     = node_modules/.bin/mocha
 _MOCHA    = node_modules/.bin/_mocha
 JSHINT    = node_modules/.bin/jshint
@@ -13,9 +14,10 @@ COVERALLS = node_modules/.bin/coveralls
 lint:
 	npm install
 	${JSHINT} .
+	${JSCS} . --reporter inline
 
 test: lint
-	${MOCHA} --reporter spec --require should
+	${MOCHA}
 
 test-cov: lint
 	${ISTANBUL} cover ${_MOCHA}
