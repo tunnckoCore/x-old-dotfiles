@@ -26,7 +26,6 @@ test-travis: lint
 	${ISTANBUL} cover ${_MOCHA} --report lcovonly
 	
 coveralls: test-travis
-	npm install coveralls
 	cat ./coverage/lcov.info | ${COVERALLS}
 
 clean:
