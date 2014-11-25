@@ -42,6 +42,11 @@ tmp
 
 # Another files #
 # ###############
-.DS_Store
+Icon?
+.DS_Store*
 Thumbs.db
+ehthumbs.db
+Desktop.ini
 npm-debug.log
+.directory
+._*

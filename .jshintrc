@@ -6,14 +6,15 @@
 
   "maxparams"     : 3,
   "maxdepth"      : 3,
-  "maxstatements" : false,
+  "maxstatements" : 15,
   "maxcomplexity" : false,
   "maxlen"        : 100,
 
   "bitwise"       : false,
-  "camelcase"     : false,
+  "camelcase"     : true,
   "curly"         : true,
-  "eqeqeq"        : false,
+  "eqeqeq"        : true,
+  "freeze"        : true,
   "forin"         : false,
   "immed"         : false,
   "latedef"       : false,
