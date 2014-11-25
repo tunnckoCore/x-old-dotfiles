@@ -5,6 +5,3 @@
 
 [push]
   default = simple
-
-[alias]
-  back = reset HEAD^ --hard

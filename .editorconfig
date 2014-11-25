@@ -1,20 +1,20 @@
-# todo again, update
-
 root = true
 
 [*]
 indent_style = space
+charset = utf-8
+end_of_line = lf
 insert_final_newline = false
-
-[*.{js,json,yml,yaml,md}]
-indent_size = 2
+trim_trailing_whitespace = false
 
 [*.{js,php}]
+indent_size = 2
 insert_final_newline = true
+trim_trailing_whitespace = true
 
-[*.{html,jade,css,stylus}]
+[*.{php,html,jade,css,stylus}]
 indent_size = 4
 
 [Makefile]
-indent_style = tab
 indent_size = 2
+indent_style = tab
