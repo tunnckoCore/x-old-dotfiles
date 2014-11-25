@@ -1,3 +1,9 @@
+# Makefile <https://github.com/tunnckoCore/dotfiles>
+#
+# Copyright (c) 2014 Charlike Mike Reagent, contributors.
+# Released under the MIT license.
+#
+
 MOCHA     = node_modules/.bin/mocha
 _MOCHA    = node_modules/.bin/_mocha
 JSHINT    = node_modules/.bin/jshint
@@ -9,16 +15,19 @@ lint:
 	${JSHINT} .
 
 test: lint
-	${MOCHA}
+	${MOCHA} --reporter spec --require should
 
 test-cov: lint
 	${ISTANBUL} cover ${_MOCHA}
 
 test-travis: lint
 	${ISTANBUL} cover ${_MOCHA} --report lcovonly
-	cat coverage/lcov.info | ${COVERALLS}
+	
+coveralls: test-travis
+	npm install coveralls
+	cat ./coverage/lcov.info | ${COVERALLS}
 
-clean: node_modules
+clean:
 	rm -rf node_modules coverage
 
-.PHONY: lint test clean
+.PHONY: lint test coveralls clean
