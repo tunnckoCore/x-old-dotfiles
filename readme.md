@@ -4,7 +4,7 @@
 ### todos
 - [ ] jscs
 - [ ] jshint update - felix code style
-- [ ] editorconfig update
+- [x] editorconfig update
 
 ### JSHint defaults with comments
 https://gist.github.com/tunnckoCore/72e7c18faff8f14c633e

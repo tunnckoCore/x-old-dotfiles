@@ -1,3 +1,9 @@
+# .bashrc <https://github.com/tunnckoCore/dotfiles>
+#
+# Copyright (c) 2014 Charlike Mike Reagent, contributors.
+# Released under the MIT license.
+#
+
 export CHARLIKE="/home/charlike"
 export NVM_DIR="$CHARLIKE/.nvm"
 export DEV_PATH="$CHARLIKE/dev"
