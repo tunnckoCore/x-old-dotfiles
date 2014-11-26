@@ -1,13 +1,15 @@
 {
-  "name": "",
-  "description": "",
-  "version": "",
+  "name": "koa-better-body",
+  "description": "A koa body parser middleware with support for `multipart`, `json`, `csp-report` or `urlencoded` request bodies. Via formidable and co-body.",
+  "version": "1.0.7",
   "scripts": {
     "lint": "npm install && node_modules/.bin/jshint . && node_modules/.bin/jscs -r inline .",
-    "test": "npm run lint && node_modules/.bin/mocha",
+    "test": "npm run lint && node_modules/.bin/mocha --harmony-generators",
     "test-cov": "npm run lint && node_modules/.bin/istanbul cover node_modules/.bin/_mocha",
     "test-travis": "npm run lint && node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly",
-    "coveralls": "npm run test-travis && cat ./coverage/lcov.info | node_modules/.bin/coveralls"
+    "coveralls": "npm run test-travis && cat ./coverage/lcov.info | node_modules/.bin/coveralls",
+    "examples-multer": "npm run test && node --harmony examples/multer.js",
+    "examples-koa-router": "npm run test && node --harmony examples/koa-router.js"
   },
   "author": {
     "name": "Charlike Make Reagent",
@@ -16,10 +18,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/repository.git"
+    "url": "git://github.com/tunnckoCore/koa-better-body.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "co-body": "*",
+    "extend": "*",
+    "formidable": ">=1.0.15"
+  },
   "devDependencies": {
+    "koa": "*",
+    "koa-router": "*",
+    "koa-resource-router": "*",
+    "multiline": "*",
+    "should": "*",
+    "supertest": "*",
+    "istanbul-harmony": "~0.3.0",
+
     "coveralls": "^2.11.2",
     "istanbul": "^0.3.2",
     "jscs": "^1.7.3",
@@ -30,13 +44,28 @@
   },
   "license": {
     "type": "MIT",
-    "url": "https://github.com/repository/blob/master/license.md"
+    "url": "https://github.com/tunnckoCore/koa-better-body/blob/master/license.md"
   },
   "engines": {
     "node": ">= 0.10.33",
     "npm": ">= 1.4.28"
   },
-  "keywords": [],
+  "keywords": [
+    "koa",
+    "request",
+    "body",
+    "middleware",
+    "bodyParser",
+    "form",
+    "data",
+    "formdata",
+    "urlencoded",
+    "multipart",
+    "multiple",
+    "upload",
+    "json",
+    "formidable"
+  ],
   "files": [
     "Makefile",
     "license.md",
