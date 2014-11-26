@@ -78,9 +78,22 @@ deleteRelease() {
   git push origin :refs/tags/$1
 }
 
+#13: update dotfiles / install to home dir
+alias dotup="installDotfiles"
+
+installDotfiles() {
+  cp "$DEV_PATH/dotfiles/.editorconfig" $CHARLIKE
+  cp "$DEV_PATH/dotfiles/.jshintignore" $CHARLIKE
+  cp "$DEV_PATH/dotfiles/.jshintrc" $CHARLIKE
+  cp "$DEV_PATH/dotfiles/.jscsrc" $CHARLIKE
+  cp "$DEV_PATH/dotfiles/.gitconfig" $CHARLIKE
+  cp "$DEV_PATH/dotfiles/.gitignore" $CHARLIKE
+  brcup
+}
+
 # Travis-CI #
 # ###########
-# login with github token in ~/.github-token file
+# login with github token from ~/.github-token file
 alias trlog="travis login --github-token `cat $CHARLIKE/.github-token`"
 
 # login and re-sync
