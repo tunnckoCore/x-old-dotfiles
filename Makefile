@@ -14,7 +14,7 @@ COVERALLS = node_modules/.bin/coveralls
 lint:
 	npm install
 	${JSHINT} .
-	${JSCS} . -r inline
+	${JSCS} . --reporter inline
 
 test: lint
 	${MOCHA}

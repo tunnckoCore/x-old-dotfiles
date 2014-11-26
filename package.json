@@ -3,7 +3,7 @@
   "description": "",
   "version": "",
   "scripts": {
-    "lint": "npm install && node_modules/.bin/jshint . && node_modules/.bin/jscs . -r inline",
+    "lint": "npm install && node_modules/.bin/jshint . && node_modules/.bin/jscs . --reporter inline",
     "test": "npm run lint && node_modules/.bin/mocha",
     "test-cov": "npm run lint && node_modules/.bin/istanbul cover node_modules/.bin/_mocha",
     "test-travis": "npm run lint && node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly",
