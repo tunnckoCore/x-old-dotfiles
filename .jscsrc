@@ -89,7 +89,10 @@
     "checkRedundantAccess": true,
     "checkTypes": true,
     "checkAnnotations": {
-      "preset": "jsdoc3"
+      "preset": "jsdoc3",
+      "extra": {
+        "api": true
+      }
     }
   },
 
