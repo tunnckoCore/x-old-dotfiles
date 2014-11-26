@@ -89,6 +89,7 @@ installDotfiles() {
   cp "$DEV_PATH/dotfiles/.gitconfig" $CHARLIKE
   cp "$DEV_PATH/dotfiles/.gitignore" $CHARLIKE
   brcup
+  echo "Don't forget to update additionalRules in $CHARLIKE/.jscsrc !!"
 }
 
 # Travis-CI #
