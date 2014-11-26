@@ -70,6 +70,13 @@ alias gap="gac 'commit from .bashrc' && git push"
 #11: (2) (10)
 alias ntgap="ntgac 'commit from .bashrc' && git push"
 
+#12: delete tag/release (local and remote)
+alias deltag="deleteRelease"
+
+deleteRelease() {
+  git tag -d $1
+  git push origin :refs/tags/$1
+}
 
 # Travis-CI #
 # ###########
