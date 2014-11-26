@@ -1,39 +1,30 @@
 {
-  "name": "koa-better-body",
-  "description": "A koa body parser middleware with support for `multipart`, `json`, `csp-report` or `urlencoded` request bodies. Via formidable and co-body.",
-  "version": "1.0.7",
+  "name": "",
+  "description": "",
+  "version": "",
   "scripts": {
-    "lint": "npm install && node_modules/.bin/jshint . && node_modules/.bin/jscs -r inline .",
-    "test": "npm run lint && node_modules/.bin/mocha --harmony-generators",
+    "lint": "npm install && node_modules/.bin/jshint . && node_modules/.bin/jscs . -r inline",
+    "test": "npm run lint && node_modules/.bin/mocha",
     "test-cov": "npm run lint && node_modules/.bin/istanbul cover node_modules/.bin/_mocha",
     "test-travis": "npm run lint && node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly",
     "coveralls": "npm run test-travis && cat ./coverage/lcov.info | node_modules/.bin/coveralls",
-    "examples-multer": "npm run test && node --harmony examples/multer.js",
-    "examples-koa-router": "npm run test && node --harmony examples/koa-router.js"
   },
   "author": {
     "name": "Charlike Make Reagent",
     "email": "mameto_100@mail.bg",
     "url": "https://github.com/tunnckoCore"
   },
+  "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git://github.com/tunnckoCore/koa-better-body.git"
+    "url": "git://github.com/reponame.git"
   },
-  "dependencies": {
-    "co-body": "*",
-    "extend": "*",
-    "formidable": ">=1.0.15"
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/reponame/blob/master/license.md"
   },
+  "dependencies": {},
   "devDependencies": {
-    "koa": "*",
-    "koa-router": "*",
-    "koa-resource-router": "*",
-    "multiline": "*",
-    "should": "*",
-    "supertest": "*",
-    "istanbul-harmony": "~0.3.0",
-
     "coveralls": "^2.11.2",
     "istanbul": "^0.3.2",
     "jscs": "^1.7.3",
@@ -42,36 +33,8 @@
     "mocha": "^2.0.1",
     "mocha-lcov-reporter": "0.0.1"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/tunnckoCore/koa-better-body/blob/master/license.md"
-  },
   "engines": {
     "node": ">= 0.10.33",
     "npm": ">= 1.4.28"
-  },
-  "keywords": [
-    "koa",
-    "request",
-    "body",
-    "middleware",
-    "bodyParser",
-    "form",
-    "data",
-    "formdata",
-    "urlencoded",
-    "multipart",
-    "multiple",
-    "upload",
-    "json",
-    "formidable"
-  ],
-  "files": [
-    "Makefile",
-    "license.md",
-    "history.md",
-    "readme.md",
-    "index.js",
-    "lib"
-  ]
+  }
 }
