@@ -87,7 +87,7 @@
     "checkRedundantReturns": true,
     "requireReturnTypes": true,
     "checkRedundantAccess": true,
-    "checkTypes": true,
+    "checkTypes": "capitalizedNativeCase",
     "checkAnnotations": {
       "preset": "jsdoc3",
       "extra": {
