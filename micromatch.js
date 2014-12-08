@@ -10,6 +10,11 @@ module.exports = function micromatch(str, pattern) {
 
   needle = braces(pattern)
 
+  // needle = needle.filter(function(item) {
+  //   return isNegate(pattern) ? item.slice(1) : item;
+  // }).map(function(item) {
+  //   return esc(item);
+  // });
   if (isNegate(pattern)) {
     needle = needle.map(function(item) {
       return esc(item.slice(1));
@@ -26,13 +31,13 @@ module.exports = function micromatch(str, pattern) {
 
   if (isNegate(pattern)) {
     needle = '(?!^' + needle + ')';
-    console.log(needle)
+    //console.log(needle)
     var matches = str.match(needle);
     return matches.index === 0 ? true : false;
   }
 
   needle = new RegExp('^' + needle + '$');
-  console.log(needle)
+  //console.log(needle)
   return needle.test(str)
 }
 
