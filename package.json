@@ -7,7 +7,7 @@
     "test": "npm run lint && node_modules/.bin/mocha",
     "test-cov": "npm run lint && node_modules/.bin/istanbul cover node_modules/.bin/_mocha",
     "test-travis": "npm run lint && node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly",
-    "coveralls": "npm run test-travis && cat ./coverage/lcov.info | node_modules/.bin/coveralls",
+    "coveralls": "npm run test-travis && cat ./coverage/lcov.info | node_modules/.bin/coveralls"
   },
   "author": {
     "name": "Charlike Make Reagent",
@@ -17,11 +17,11 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git://github.com/reponame.git"
+    "url": "git://github.com/ghpath.git"
   },
   "license": {
     "type": "MIT",
-    "url": "https://github.com/reponame/blob/master/license.md"
+    "url": "https://github.com/ghpath/blob/master/license.md"
   },
   "dependencies": {},
   "devDependencies": {

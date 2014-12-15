@@ -89,7 +89,6 @@ installDotfiles() {
   cp "$DEV_PATH/dotfiles/.gitconfig" $CHARLIKE
   cp "$DEV_PATH/dotfiles/.gitignore" $CHARLIKE
   brcup
-  echo "Don't forget to update additionalRules in $CHARLIKE/.jscsrc !!"
 }
 
 # Travis-CI #
@@ -101,6 +100,7 @@ alias trlog="travis login --github-token `cat $CHARLIKE/.github-token`"
 alias sytr="trlog && travis enable -r"
 
 
-# koreflow/dotfiles - templates #
-# ###############################
-alias kdf="gitclone koreflow/dotfiles"
+# tunnckoCore/dotfiles - dotfiles templates #
+# ###########################################
+#alias kdf="gitclone koreflow/dotfiles"
+alias dotfiles="gitclone tunnckoCore/dotfiles"
