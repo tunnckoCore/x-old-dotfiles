@@ -25,6 +25,7 @@ alias nikoletka="echo 'Starting ...' && node $DEV_PATH/nikoletka-bot/nikoletka-s
 # init badgelino demo server
 alias blio="echo 'Badgelino.io started.' && node --harmony $DEV_PATH/badgelino/demo-server.js"
 
+alias cl="clear"
 alias rm="rm -rf"
 alias mkdir="mkdir -p"
 alias myip="curl http://ipecho.net/plain; echo"
