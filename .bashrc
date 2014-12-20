@@ -105,3 +105,12 @@ alias sytr="trlog && travis enable -r"
 # ###########################################
 #alias kdf="gitclone koreflow/dotfiles"
 alias dotfiles="gitclone tunnckoCore/dotfiles"
+
+
+alias kr="createDirAndLogin"
+alias create="createDirAndLogin"
+
+createDirAndLogin() {
+  mkdir $1
+  cd $1
+}

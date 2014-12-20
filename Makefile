@@ -12,23 +12,19 @@ ISTANBUL  = node_modules/.bin/istanbul
 COVERALLS = node_modules/.bin/coveralls
 
 lint:
-	npm install
 	${JSHINT} .
 	${JSCS} . --reporter inline
 
-test: lint
+test:
 	${MOCHA}
 
-test-cov: lint
+test-cov:
 	${ISTANBUL} cover ${_MOCHA}
 
-test-travis: lint
+test-travis:
 	${ISTANBUL} cover ${_MOCHA} --report lcovonly
-  
-coveralls: test-travis
-	cat ./coverage/lcov.info | ${COVERALLS}
 
 clean:
-	rm -rf node_modules coverage
+	rm -rf node_modules
 
-.PHONY: lint test coveralls clean
+.PHONY: lint test clean
