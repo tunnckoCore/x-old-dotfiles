@@ -94,8 +94,8 @@ installDotfiles() {
 
 # Travis-CI #
 # ###########
-# login with github token from ~/.github-token file
-alias trlog="travis login --github-token `cat $CHARLIKE/.github-token`"
+# login with github token from ~/.config/.github-token file
+alias trlog="travis login --github-token `cat $CHARLIKE/.config/.github-token`"
 
 # login and re-sync
 alias sytr="trlog && travis enable -r"
