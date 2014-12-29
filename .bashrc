@@ -5,7 +5,6 @@
 #
 
 export NVM_DIR="$HOME/.nvm"
-export DEV_PATH="$HOME/dev"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 nvm use 0.11
@@ -16,13 +15,13 @@ cd ~/
 # #########
 
 # update this file (.bashrc)
-alias brcup="cp $DEV_PATH/dotfiles/.bashrc ~/ && echo 'Updated.'"
+alias brcup="cp $HOME/dev/dotfiles/.bashrc ~/ && echo 'Updated.'"
 
 # init nikoletka @ freenode
-alias nikoletka="echo 'Starting ...' && node $DEV_PATH/nikoletka-bot/nikoletka-start.js"
+alias nikoletka="echo 'Starting ...' && node $HOME/dev/nikoletka-bot/nikoletka-start.js"
 
 # init badgelino demo server
-alias blio="echo 'Badgelino.io started.' && node --harmony $DEV_PATH/badgelino/demo-server.js"
+alias blio="echo 'Badgelino.io started.' && node --harmony $HOME/dev/badgelino/demo-server.js"
 
 alias cl="clear"
 alias rm="rm -rf"
@@ -82,12 +81,12 @@ deleteRelease() {
 alias dotup="installDotfiles"
 
 installDotfiles() {
-  cp "$DEV_PATH/dotfiles/.editorconfig" $HOME
-  cp "$DEV_PATH/dotfiles/.jshintignore" $HOME
-  cp "$DEV_PATH/dotfiles/.jshintrc" $HOME
-  cp "$DEV_PATH/dotfiles/.jscsrc" $HOME
-  cp "$DEV_PATH/dotfiles/.gitconfig" $HOME
-  cp "$DEV_PATH/dotfiles/.gitignore" $HOME
+  cp "$HOME/dev/dotfiles/.editorconfig" $HOME
+  cp "$HOME/dev/dotfiles/.jshintignore" $HOME
+  cp "$HOME/dev/dotfiles/.jshintrc" $HOME
+  cp "$HOME/dev/dotfiles/.jscsrc" $HOME
+  cp "$HOME/dev/dotfiles/.gitconfig" $HOME
+  cp "$HOME/dev/dotfiles/.gitignore" $HOME
   brcup
 }
 
@@ -103,7 +102,7 @@ alias sytr="trlog && travis enable -r"
 # tunnckoCore/dotfiles - dotfiles templates #
 # ###########################################
 #alias kdf="gitclone koreflow/dotfiles"
-alias dotfiles="gitclone tunnckoCore/dotfiles"
+alias dotfiles="gitclone tunnckoCore/dotfiles -s"
 
 
 alias kr="createDirAndLogin"
