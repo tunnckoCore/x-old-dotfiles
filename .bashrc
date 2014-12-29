@@ -4,9 +4,8 @@
 # Released under the MIT license.
 #
 
-export CHARLIKE="/home/charlike"
-export NVM_DIR="$CHARLIKE/.nvm"
-export DEV_PATH="$CHARLIKE/dev"
+export NVM_DIR="$HOME/.nvm"
+export DEV_PATH="$HOME/dev"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 nvm use 0.11
@@ -83,19 +82,19 @@ deleteRelease() {
 alias dotup="installDotfiles"
 
 installDotfiles() {
-  cp "$DEV_PATH/dotfiles/.editorconfig" $CHARLIKE
-  cp "$DEV_PATH/dotfiles/.jshintignore" $CHARLIKE
-  cp "$DEV_PATH/dotfiles/.jshintrc" $CHARLIKE
-  cp "$DEV_PATH/dotfiles/.jscsrc" $CHARLIKE
-  cp "$DEV_PATH/dotfiles/.gitconfig" $CHARLIKE
-  cp "$DEV_PATH/dotfiles/.gitignore" $CHARLIKE
+  cp "$DEV_PATH/dotfiles/.editorconfig" $HOME
+  cp "$DEV_PATH/dotfiles/.jshintignore" $HOME
+  cp "$DEV_PATH/dotfiles/.jshintrc" $HOME
+  cp "$DEV_PATH/dotfiles/.jscsrc" $HOME
+  cp "$DEV_PATH/dotfiles/.gitconfig" $HOME
+  cp "$DEV_PATH/dotfiles/.gitignore" $HOME
   brcup
 }
 
 # Travis-CI #
 # ###########
 # login with github token from ~/.config/.github-token file
-alias trlog="travis login --github-token `cat $CHARLIKE/.config/.github-token`"
+alias trlog="travis login --github-token `cat $HOME/.config/.github-token`"
 
 # login and re-sync
 alias sytr="trlog && travis enable -r"
