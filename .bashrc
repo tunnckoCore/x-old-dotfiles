@@ -10,6 +10,13 @@ export NVM_DIR="$HOME/.nvm"
 nvm use 0.11
 cd ~/
 
+# GIT CONFIG #
+# ############
+export GIT_CONFIG_USERNAME = "tunnckoCore"
+export GIT_CONFIG_USERMAIL = "mameto_100@mail.bg"
+git config --global user.name "$GIT_CONFIG_USERNAME"
+git config --global user.email "$GIT_CONFIG_USERMAIL"
+git config --global push.default simple
 
 # ALIASES #
 # #########

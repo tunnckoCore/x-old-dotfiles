@@ -1,6 +1,5 @@
 
 /**
- * Token: 1bcec3340f5e4e99bba21f603b7a02361c46d0ca
  * Module dependencies.
  */
 require('autoinstall')
@@ -46,7 +45,7 @@ program
       .end(function(err, result){
         errorHandler(result)
         var endpoint = '';
-        
+
         if (result.body.type == 'User') {
           endpoint = '/user/repos'
         } else {
