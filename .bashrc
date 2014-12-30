@@ -14,6 +14,7 @@ cd ~/
 # ############
 export GIT_CONFIG_USERNAME="tunnckoCore"
 export GIT_CONFIG_USERMAIL="mameto_100@mail.bg"
+export GIT_CONFIG_TOKEN="`cat $HOME/.config/.github-token`"
 git config --global user.name "$GIT_CONFIG_USERNAME"
 git config --global user.email "$GIT_CONFIG_USERMAIL"
 git config --global push.default simple
@@ -99,7 +100,7 @@ installDotfiles() {
 # Travis-CI #
 # ###########
 # login with github token from ~/.config/.github-token file
-alias trlog="travis login --github-token `cat $HOME/.config/.github-token`"
+alias trlog="travis login --github-token $GIT_CONFIG_TOKEN"
 
 # login and re-sync
 alias sytr="trlog && travis enable -r"
