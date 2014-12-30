@@ -85,7 +85,6 @@ installDotfiles() {
   cp "$HOME/dev/dotfiles/.jshintignore" $HOME
   cp "$HOME/dev/dotfiles/.jshintrc" $HOME
   cp "$HOME/dev/dotfiles/.jscsrc" $HOME
-  cp "$HOME/dev/dotfiles/.gitconfig" $HOME
   cp "$HOME/dev/dotfiles/.gitignore" $HOME
   brcup
 }
