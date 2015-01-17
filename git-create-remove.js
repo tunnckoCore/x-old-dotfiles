@@ -12,7 +12,7 @@ var api = 'https://api.github.com'
 
 program
   .version('0.0.1')
-  .option('-t, --token <token>', 'Github auth token', '1bcec3340f5e4e99bba21f603b7a02361c46d0ca')
+  .option('-t, --token <token>', 'Github auth token', '31707dfcf807122b64ceb5de336854c5b0935759')
   .parse(process.argv);
 
 

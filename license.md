@@ -1,4 +1,4 @@
-Copyright (c) 2014 [Charlike Make Reagent][contrib-more], [contributors][contrib-url].  
+Copyright (c) 2015 [Charlike Make Reagent][contrib-more], [contributors][contrib-url].  
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
