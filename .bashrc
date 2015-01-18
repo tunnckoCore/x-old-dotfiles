@@ -1,6 +1,6 @@
 # .bashrc <https://github.com/tunnckoCore/dotfiles>
 #
-# Copyright (c) 2015 Charlike Mike Reagent, contributors.
+# Copyright (c) 2014 Charlike Mike Reagent, contributors.
 # Released under the MIT license.
 #
 
@@ -32,8 +32,10 @@ alias nikoletka="echo 'Starting ...' && node $HOME/dev/nikoletka-bot/nikoletka-s
 alias blio="echo 'Badgelino.io started.' && node --harmony $HOME/dev/badgelino/demo-server.js"
 
 alias cl="clear"
-alias rm="rm -rf"
+alias rm="echo 'Use `del` or `trash` instead!!' && rm -rfi"
+alias del="trash"
 alias mkdir="mkdir -p"
+alias mkdirp="mkdir -p"
 alias myip="curl http://ipecho.net/plain; echo"
 alias ..="cd .."
 alias cd..="cd .."
