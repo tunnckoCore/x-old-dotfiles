@@ -32,8 +32,7 @@ alias nikoletka="echo 'Starting ...' && node $HOME/dev/nikoletka-bot/nikoletka-s
 alias blio="echo 'Badgelino.io started.' && node --harmony $HOME/dev/badgelino/demo-server.js"
 
 alias cl="clear"
-alias rm="echo 'Use `del` or `trash` instead!!' && rm -rfi"
-alias del="trash"
+alias rm="echo 'Use \"trash\" instead!!' && rm -rfi"
 alias mkdir="mkdir -p"
 alias mkdirp="mkdir -p"
 alias myip="curl http://ipecho.net/plain; echo"
@@ -50,7 +49,16 @@ alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias gback="git reset HEAD^ --hard"
 
 #2: npm test
-alias gnt="npm test"
+alias gnt="runTests"
+
+runTests() {
+  if [ $# -eq 0 ]
+  then
+    npm test
+  else
+    npm run $1
+  fi
+}
 
 #3: git push
 alias gp="git push"
