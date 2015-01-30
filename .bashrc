@@ -107,6 +107,11 @@ installDotfiles() {
   brcup
 }
 
+#14: git back && git push -f
+alias gb="git back && gp -f"
+alias gback="git back && gp -f"
+alias gitback="git back && gp -f"
+
 # Travis-CI #
 # ###########
 # login with github token from ~/.config/.github-token file
