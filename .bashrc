@@ -112,6 +112,15 @@ alias gb="git back && gp -f"
 alias gback="git back && gp -f"
 alias gitback="git back && gp -f"
 
+#15: npm publish && git release [version]
+alias publish="publishPackage"
+alias pub="publishPackage"
+
+publishPackage() {
+  gnt lint && gnt test
+  gnt test-cov && git release $1 && npm publish
+}
+
 # Travis-CI #
 # ###########
 # login with github token from ~/.config/.github-token file
