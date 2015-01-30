@@ -1,11 +1,10 @@
 [user]
-    email = mamemto_100@mail.bg
-    name = tunnckoCore
-    user = tunnckoCore
+  email = mameto_100@mail.bg
+  name = "Charlike Mike Reagent"
+  user = tunnckoCore
 
 [push]
-    default = simple
+  default = simple
 
 [alias]
-    publish=push
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
