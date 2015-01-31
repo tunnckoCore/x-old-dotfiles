@@ -115,6 +115,7 @@ alias gitback="git back && gp -f"
 #15: npm publish && git release [version]
 alias publish="publishPackage"
 alias pub="publishPackage"
+alias deploy="publishPackage"
 
 publishPackage() {
   gnt lint && gnt test
