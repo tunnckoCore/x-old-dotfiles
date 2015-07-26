@@ -38,7 +38,7 @@ alias cov="istanbul cover test.js"
 alias gt="echo $GIT_CONFIG_TOKEN"
 
 # update this file (.bashrc)
-alias brcup="cp $HOME/dev/dotfiles/.bashrc ~/ && echo 'Updated.'"
+alias brcup="cp $HOME/dev/dotfiles/.bashrc $HOME && echo 'dotfiles updated'"
 
 # init nikoletka @ freenode
 alias nikoletka="echo 'Starting ...' && node $HOME/dev/nikoletka-bot/nikoletka-start.js"
@@ -61,7 +61,7 @@ alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 # ###############
 
 #1: undo
-alias gback="git reset HEAD^ --hard"
+#alias gback="git reset HEAD^ --hard"
 
 #2: npm test
 alias gnt="runTests"
@@ -115,9 +115,7 @@ alias dotup="installDotfiles"
 
 installDotfiles() {
   cp "$HOME/dev/dotfiles/.editorconfig" $HOME
-  cp "$HOME/dev/dotfiles/.jshintignore" $HOME
-  cp "$HOME/dev/dotfiles/.jshintrc" $HOME
-  cp "$HOME/dev/dotfiles/.jscsrc" $HOME
+  cp "$HOME/dev/dotfiles/.gitconfig" $HOME
   cp "$HOME/dev/dotfiles/.gitignore" $HOME
   brcup
 }
@@ -133,8 +131,7 @@ alias pub="publishPackage"
 alias deploy="publishPackage"
 
 publishPackage() {
-  gnt lint && gnt test
-  gnt test-cov && git release $1 && npm publish
+  gnt && git release $1 && npm publish
 }
 
 # Travis-CI #
@@ -160,9 +157,3 @@ createDirAndLogin() {
   cd $1
 }
 
-export NVM_DIR="/home/charlike/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-###
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-[[ -s "$HOME/.qfc/bin/qfc.sh" ]] && source "$HOME/.qfc/bin/qfc.sh"
