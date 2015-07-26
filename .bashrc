@@ -149,11 +149,3 @@ alias sytr="trlog && travis enable -r"
 alias dotfiles="gitclone tunnckoCore/dotfiles -s"
 
 alias ji="kill-tabs"
-alias kr="createDirAndLogin"
-alias create="createDirAndLogin"
-
-createDirAndLogin() {
-  mkdir $1
-  cd $1
-}
-
