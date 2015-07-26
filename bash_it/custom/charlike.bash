@@ -40,7 +40,7 @@ npmRunTests() {
 # misc
 alias cl="clear"
 alias cd..="cd .."
-alias cov="istanbul cover test"
+alias cov="istanbul cover test.js"
 alias ji="kill-tabs"
 alias tabs="kill-tabs"
 alias dotfiles="gitclone tunnckoCore/dotfiles -s"
