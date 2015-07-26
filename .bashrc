@@ -117,6 +117,7 @@ installDotfiles() {
   cp "$HOME/dev/dotfiles/.editorconfig" $HOME
   cp "$HOME/dev/dotfiles/.gitconfig" $HOME
   cp "$HOME/dev/dotfiles/.gitignore" $HOME
+  cp "$HOME/dev/dotfiles/.curlrc" $HOME
   brcup
 }
 
