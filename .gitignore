@@ -21,6 +21,7 @@ nbproject
 cache
 temp
 tmp
+#{{default name basename}}
 
 # Packages #
 # ##########
@@ -53,3 +54,4 @@ Desktop.ini
 npm-debug.log
 .directory
 ._*
+lcov.info

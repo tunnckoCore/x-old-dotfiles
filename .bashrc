@@ -4,11 +4,20 @@
 # Released under the MIT license.
 #
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+  . /etc/bashrc
+fi
+
+# User specific aliases and functions
+#PS1='\[\033[01;34m\][\u@\h\[\033[00m\] \[\033[01;34m\]\W]\[\033[00m\]\$ '
+#fortune -s | cowsay
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-nvm use 0.11
-cd ~/
+cd ~/dev
+nvm use iojs
 
 # GIT CONFIG #
 # ############
@@ -21,6 +30,12 @@ git config --global push.default simple
 
 # ALIASES #
 # #########
+
+# coverage shortcut
+alias cov="istanbul cover test.js"
+
+# git config token
+alias gt="echo $GIT_CONFIG_TOKEN"
 
 # update this file (.bashrc)
 alias brcup="cp $HOME/dev/dotfiles/.bashrc ~/ && echo 'Updated.'"
@@ -136,7 +151,7 @@ alias sytr="trlog && travis enable -r"
 #alias kdf="gitclone koreflow/dotfiles"
 alias dotfiles="gitclone tunnckoCore/dotfiles -s"
 
-
+alias ji="kill-tabs"
 alias kr="createDirAndLogin"
 alias create="createDirAndLogin"
 
@@ -144,3 +159,10 @@ createDirAndLogin() {
   mkdir $1
   cd $1
 }
+
+export NVM_DIR="/home/charlike/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+###
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.qfc/bin/qfc.sh" ]] && source "$HOME/.qfc/bin/qfc.sh"
