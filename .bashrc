@@ -35,7 +35,7 @@ git config --global push.default simple
 alias cov="istanbul cover test.js"
 
 # git config token
-alias gt="echo $GIT_CONFIG_TOKEN"
+alias gtok="git config --global github.token"
 
 # update this file (.bashrc)
 alias brcup="cp $HOME/dev/dotfiles/.bashrc $HOME && echo 'dotfiles updated'"
