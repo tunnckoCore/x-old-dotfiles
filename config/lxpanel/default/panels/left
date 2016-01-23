@@ -1,0 +1,61 @@
+# lxpanel <profile> config file. Manually editing is not recommended.
+# Use preference dialog in lxpanel to adjust config when you can.
+
+Global {
+  edge=bottom
+  monitor=0
+  height=28
+  align=center
+  margin=0
+  iconsize=28
+  transparent=0
+  background=0
+}
+Plugin {
+  type=space
+  Config {
+    Size=2
+  }
+}
+Plugin {
+  type=wincmd
+  Config {
+    Button1=iconify
+    Button2=shade
+    Toggle=1
+  }
+}
+Plugin {
+  type=space
+  Config {
+    Size=2
+  }
+}
+Plugin {
+  type=taskbar
+  Config {
+    FlatButton=0
+    ShowAllDesks=0
+    tooltips=0
+    IconsOnly=0
+    SameMonitorOnly=1
+    MaxTaskWidth=170
+    UseMouseWheel=0
+  }
+  expand=1
+}
+Plugin {
+  type=dclock
+  Config {
+    ClockFmt=%R
+    TooltipFmt=%A %x
+    BoldFont=0
+    IconOnly=0
+    CenterText=0
+  }
+}
+Plugin {
+  type=pager
+  Config {
+  }
+}

@@ -1,23 +1,16 @@
-# .bashrc <https://github.com/tunnckoCore/dotfiles>
 #
-# Copyright (c) 2014 Charlike Mike Reagent, contributors.
-# Released under the MIT license.
+# ~/.bashrc
 #
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-  . /etc/bashrc
-fi
-
-# User specific aliases and functions
-#PS1='\[\033[01;34m\][\u@\h\[\033[00m\] \[\033[01;34m\]\W]\[\033[00m\]\$ '
-#fortune -s | cowsay
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 cd ~/dev
-nvm use v4
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
+
+#eval `keychain --eval --nogui -Q -q $HOME/.ssh/id_rsa`
 
 # GIT CONFIG #
 # ############
@@ -41,10 +34,12 @@ alias gtok="git config --global github.token"
 alias brcup="cp $HOME/dev/dotfiles/.bashrc $HOME && echo 'dotfiles updated'"
 
 # init nikoletka @ freenode
-alias nikoletka="echo 'Starting ...' && node $HOME/dev/nikoletka-bot/nikoletka-start.js"
+alias nikoletka="echo 'Starting ...' && node 
+$HOME/dev/nikoletka-bot/nikoletka-start.js"
 
 # init badgelino demo server
-alias blio="echo 'Badgelino.io started.' && node --harmony $HOME/dev/badgelino/demo-server.js"
+alias blio="echo 'Badgelino.io started.' && node --harmony 
+$HOME/dev/badgelino/demo-server.js"
 
 alias cl="clear"
 alias rm="echo 'Use \"trash\" instead!!' && rm -rfi"
@@ -150,3 +145,4 @@ alias sytr="trlog && travis enable -r"
 alias dotfiles="gitclone tunnckoCore/dotfiles -s"
 
 alias ji="kill-tabs"
+alias new="khaos create new"
