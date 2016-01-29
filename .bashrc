@@ -41,6 +41,7 @@ $HOME/dev/nikoletka-bot/nikoletka-start.js"
 alias blio="echo 'Badgelino.io started.' && node --harmony 
 $HOME/dev/badgelino/demo-server.js"
 
+alias xina="nano ~/.xinitrc"
 alias cl="clear"
 alias rm="echo 'Use \"trash\" instead!!' && rm -rfi"
 alias mkdir="mkdir -p"
@@ -146,3 +147,14 @@ alias dotfiles="gitclone tunnckoCore/dotfiles -s"
 
 alias ji="kill-tabs"
 alias new="khaos create new"
+
+__gad__() {
+  if [ $# -eq 0 ]
+  then
+    gac "default commit message" && gp
+  else
+    gac "$1" && gp
+  fi
+}
+
+alias gad="__gad__"
