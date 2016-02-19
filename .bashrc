@@ -20,6 +20,7 @@ export GIT_CONFIG_TOKEN="`cat $HOME/.config/.github-token`"
 git config --global user.name "$GIT_CONFIG_USERNAME"
 git config --global user.email "$GIT_CONFIG_USERMAIL"
 git config --global push.default simple
+git config --global github.token "$GIT_CONFIG_TOKEN"
 
 # ALIASES #
 # #########
@@ -28,7 +29,7 @@ git config --global push.default simple
 alias cov="istanbul cover test.js"
 
 # git config token
-alias gtok="git config --global github.token"
+alias gtok="echo $GIT_CONFIG_TOKEN"
 
 # update this file (.bashrc)
 alias brcup="cp $HOME/dev/dotfiles/.bashrc $HOME && echo 'dotfiles updated'"
@@ -158,3 +159,7 @@ __gad__() {
 }
 
 alias gad="__gad__"
+alias vc="verb --config layout:empty,tasks:readme,toc:false"
+alias vcr="npm install verbose/verb-readme-generator"
+alias stf="standard-format"
+alias sf="standard-format"
