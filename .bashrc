@@ -2,8 +2,6 @@
 # ~/.bashrc
 #
 
-cd ~/dev
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -81,10 +79,10 @@ alias gpl="git pull"
 #5: git add
 alias ga="git add"
 
-#6: git commit
-alias gci="git commit"
+#6: git commit (from gitconfig: `ci = git commit -S`)
+alias gci="git ci"
 
-#7: git commit -m
+#7: git commit -S -m
 alias gcm="gci -m"
 
 #8: git add -A && git commit -m
@@ -149,7 +147,21 @@ alias dotfiles="gitclone tunnckoCore/dotfiles -s"
 alias ji="kill-tabs"
 alias new="khaos create new"
 
-__gad__() {
+# TODO: cleanup aliases
+# gad() {
+#   git add -A
+
+#   if [ $# -eq 0 ]
+#   then
+#     git commit -S -m "default commit message"
+#   else
+#     git commit -S -m "$1"
+#   fi
+
+#   git push
+# }
+
+gad() {
   if [ $# -eq 0 ]
   then
     gac "default commit message" && gp
@@ -158,8 +170,13 @@ __gad__() {
   fi
 }
 
-alias gad="__gad__"
+# alias gad="__gad__"
 alias vc="verb --config layout:empty,tasks:readme,toc:false"
 alias vcr="npm install verbose/verb-readme-generator"
-alias stf="standard-format"
-alias sf="standard-format"
+alias stf="standard-format -w"
+alias sf="standard-format -w"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+#nvm use 5

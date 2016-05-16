@@ -1,10 +1,80 @@
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+
+[color "branch"]
+	current = red reverse
+	local = blue
+	remote = green
+
+[color "diff"]
+	meta = yellow
+	frag = magenta
+	old = red bold
+	new = green
+	plain = white
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
 [user]
-  email = mameto_100@mail.bg
-  name = tunnckoCore
-  user = tunnckoCore
+	email = mameto_100@mail.bg
+	name = tunnckoCore
+	user = tunnckoCore
+	signingkey = "Charlike Mike Reagent (@tunnckoCore) <mameto_100@mail.bg>"
+
+[commit]
+	gpgsign = true
 
 [push]
-  default = simple
+	default = simple
+
+[github]
+	username = tunnckoCore
+	token = TOKEN_HERE
+
+[credential]
+	helper = /usr/lib/git-core/git-credential-gnome-keyring
 
 [alias]
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %Cgreen(%cr)%Creset ' --abbrev-commit
+	empty = "!git commit -am\"[empty] Initial commit\" --allow-empty"
+	cp = cherry-pick
+	st = status -s
+	cl = clone
+	ci = commit -S
+	co = checkout
+	br = branch
+
+	r = reset
+	r1 = reset HEAD^
+	r2 = reset HEAD^^
+	rh = reset --hard
+	rh1 = reset HEAD^ --hard
+	rh2 = reset HEAD^^ --hard
+
+	find = "!git ls-files | grep -i"
+	f = "!git ls-files | grep -i"
+
+	diff = diff --word-diff
+	dr  = "!f() { git diff "$1"^.."$1"; }; f"
+	lc  = "!f() { git diff "$1"^.."$1"; }; f"
+
+	la = "!git config -l | grep alias | cut -c 7-"
+	ls = log --oneline --decorate
+
+	grep = grep -Ii
+	gr = grep -Ii
+
+	filelog = log -u
+	fl = log -u
+
+	lasttag = describe --tags --abbrev=0
+	lt = describe --tags --abbrev=0
+
+	ras = "!f() { git remote add $1 git@github.com:$2.git; }; f"
+	ra = "!f() { git remote add $1 https://github.com/$2.git; }; f"
+	wl = worktree list
