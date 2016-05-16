@@ -180,3 +180,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 #nvm use 5
+
+# add to ~/.bash_profile
+# -q -> quiet
+# -Q -> quick
+# eval `keychain --eval --nogui -Q -q $HOME/.ssh/id_rsa`
+#eval `keychain --eval $HOME/.ssh/id_rsa`
