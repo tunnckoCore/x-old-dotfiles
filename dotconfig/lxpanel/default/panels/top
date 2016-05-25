@@ -1,0 +1,55 @@
+# lxpanel <profile> config file. Manually editing is not recommended.
+# Use preference dialog in lxpanel to adjust config when you can.
+
+Global {
+  edge=top
+  monitor=0
+  height=30
+  iconsize=30
+  transparent=0
+  background=0
+  tintcolor=#000000
+  alpha=255
+  setdocktype=0
+}
+Plugin {
+  type=menu
+  Config {
+    system {
+    }
+    separator {
+    }
+    item {
+      command=run
+    }
+    separator {
+    }
+    item {
+      command=logout
+      image=gnome-logout
+    }
+    image=/usr/share/archlinux/logos/archlinux-mono-white.svg
+  }
+}
+Plugin {
+  type=space
+  Config {
+    Size=2
+  }
+  expand=1
+}
+Plugin {
+  type=volumealsa
+  Config {
+  }
+}
+Plugin {
+  type=dclock
+  Config {
+    ClockFmt=%B %d, %H:%M:%S
+    TooltipFmt=%A %d %B %Y
+    BoldFont=0
+    IconOnly=0
+    CenterText=0
+  }
+}
