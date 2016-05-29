@@ -1,0 +1,6 @@
+sxhkd &
+setxkbmap -layout "us,bg(phonetic)" -option "grp:alt_shift_toggle" &
+xsetroot -solid "#181318" &
+xsetroot -cursor_name left_ptr &
+numlockx on &
+exec bspwm
