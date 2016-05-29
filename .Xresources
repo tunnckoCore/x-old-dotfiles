@@ -1,0 +1,26 @@
+!need more work
+!it's just a start
+
+Xcursor.theme: Human
+
+!keymap
+URxvt*keysym.Home: \033[1~
+URxvt*keysym.End: \033[4~
+
+!fonts
+URxvt.font:                xft:Noto Sans:size=12
+URxvt.boldFont:            xft:Noto Sans:size=12:bold
+URxvt.italicFont:          xft:Noto Sans:size=12:italic
+URxvt.boldItalicFont:      xft:Noto Sans:size=12:bold:italic
+URxvt.letterSpacing:	     0.3
+
+URxvt.internalBorder:      1
+URxvt.externalBorder:      1
+
+URxvt.scrollBar:           false
+
+!URxvt*fading:              30
+!URxvt.colorUL:             
+
+*background: #2F2F2F
+*foreground: #C2C2C2
