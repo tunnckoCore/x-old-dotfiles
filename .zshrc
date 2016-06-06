@@ -221,9 +221,11 @@ alias pacc="sudo pacman -Scc"     # '[c]lean [c]ache'  - delete all not currentl
 alias paclf="pacman -Ql"          # '[l]ist [f]iles'   - list all files installed by a given package
 alias psync='sudo pacman -Syy'    # '[sync] mirrors'   - force sync refresh mirrorlists
 alias pacyy='sudo pacman -Syy'    # 'force refresh'    - force sync refresh mirrorlists
+alias paco='sudo pacman -Sc && sudo pacman-optimize'
 
 # '[mir]ror list update' - force update with latest 50, fastest 20, sort by rate mirrors
 alias pacmir='sudo reflector -p http -l 50 -f 20 --sort rate --save /etc/pacman.d/mirrorlist'
 
 # '[r]emove [o]rphans' - recursively remove ALL orphaned packages
-alias pacro="pacman -Qtdq > /dev/null && sudo pacman -Rns \$(pacman -Qtdq | sed -e ':a;N;$!ba;s/\n/ /g')"
+alias pacro="pacman -Qtdq && sudo pacman -Rns $(pacman -Qtdq)"
+alias pacram="pacman -Qtdq && sudo pacman -Rnscd $(pacman -Qtdq)"
