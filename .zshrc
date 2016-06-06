@@ -1,9 +1,19 @@
-# ~/.zshrc, ZSH 5.2
-# June 06, 2016
-####################
+# Created by newuser for 5.2
+# 
 
 # Exports
-ZFUNCS="$HOME/.config/zfuncs"
+export ZFUNCS="$HOME/.config/zfuncs"
+export EDITOR="subl3"
+export GIT_CONFIG_USERNAME="tunnckoCore"
+export GIT_CONFIG_USERMAIL="mameto_100@mail.bg"
+export GIT_CONFIG_TOKEN="`cat $HOME/.config/.github-token`"
+
+# gitconfig
+git config --global user.name "$GIT_CONFIG_USERNAME"
+git config --global user.user "$GIT_CONFIG_USERNAME"
+git config --global user.email "$GIT_CONFIG_USERMAIL"
+git config --global push.default simple
+git config --global github.token "$GIT_CONFIG_TOKEN"
 
 # Options
 setopt PROMPT_SUBST
@@ -11,8 +21,8 @@ setopt PROMPT_SUBST
 # Autoloads
 autoload -Uz compinit && compinit
 
-fpath=("$ZFUNCS/arcklyn_git_prompt" $fpath)
-autoload -Uz $ZFUNCS/arcklyn_git_prompt/*(:t)
+fpath=($ZFUNCS/arcklyn $fpath)
+autoload -Uz $ZFUNCS/arcklyn/*(:t)
 
 # Enable auto-execution of functions.
 typeset -ga preexec_functions
@@ -36,8 +46,7 @@ ARCKLYN_GIT_AFTER="%b"
 # Awesome prompt
 PROMPT_NEWLINE=$'\n'
 PROMPT_LINE2="%B%(?.%F{green}%# ❯.%F{red}%# %? ❯)%f%b "
-PROMPT=$'%B%F{cyan}%~%f $(arcklyn_git_info) 
-${PROMPT_NEWLINE}${PROMPT_LINE2}%b'
+PROMPT=$'%B%F{cyan}%~%f $(arcklyn_git_info) ${PROMPT_NEWLINE}${PROMPT_LINE2}%b'
 RPROMPT=$'%B%F{blue}[%f$(date +"%B %d, %H:%M:%S")%F{blue}]%f%b'
 
 # Bindings
@@ -62,3 +71,52 @@ bindkey '^r' history-incremental-search-backward
 export NVM_DIR="/home/charlike/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# Aliases
+
+alias home="cd $HOME"
+alias H="cd $HOME"
+alias edit="$EDITOR"
+alias E="$EDITOR"
+alias cov="istanbul cover test.js"
+alias gtok="echo `cat $HOME/.config/.github-token`"
+alias nrt="npm run test"
+alias kt="kill-tabs"
+alias new="khaos create new"
+alias stf="standard-format -w"
+alias sf="standard-format -w"
+
+alias g='git'
+alias ga='git add'
+alias gaa='git add --all'
+alias gall='git add --all'
+
+# requires https://github.com/tj/git-extras
+alias gb="git back && git push -f"
+alias gback="git back && git push -f"
+alias gitback="git back && git push -f"
+
+alias gbr='git branch'
+alias gc='git commit -S -v'
+alias gc!='git commit -S -v --amend'
+alias gcm='git commit -S -v -m'
+alias gcl='git clone'
+alias gco='git checkout'
+alias gcom='git checkout master'
+alias gcob='git checkout -b'
+alias gac='gall && gcm'
+alias gpl='git pull'
+alias gplm='git pull origin master'
+alias gp='git push'
+alias gpm='git push origin master'
+alias gpu='git push'
+alias gpum='git push origin master'
+alias gs='git status -sb'
+alias gst='git status'
+
+gad() {
+  if [ $# -eq 0 ]; then
+    git add --all && git commit -S -v -m "default commit message" && git push
+  else
+    git add --all && git commit -S -v -m "$1" && git push
+  fi
+}
