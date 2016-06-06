@@ -208,7 +208,6 @@ alias sc-mask-now="sc-mask --now"
 # https://github.com/midfingr/archmid-iso/blob/master/airootfs/etc/skel/.bashrc
 alias yrt='yaourt'
 alias yar='yaourt'
-alias yart='yaourt'
 alias pac="sudo pacman -S"        # default action     - install one or more packages
 alias pacu="sudo pacman -Syu"     # '[u]pdate'         - upgrade all packages to their newest version
 alias pacy="sudo pacman -Syyu"    # '[u]pdate force'   - upgrade all packages, force sync mirrors
