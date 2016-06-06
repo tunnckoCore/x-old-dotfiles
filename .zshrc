@@ -177,24 +177,24 @@ alias gitback="git back && git push -f"
 
 # Git all, signed commit + given message, git push
 gad() {
-  if [ $# -eq 0 ]; then
-    git add --all && git commit -S -v -m "default commit message" && git push
-  else
-    git add --all && git commit -S -v -m "$1" && git push
-  fi
+    if [ $# -eq 0 ]; then
+        git add --all && git commit -S -v -m "default commit message" && git push
+    else
+        git add --all && git commit -S -v -m "$1" && git push
+    fi
 }
 
 # Systemd sugars
 user_commands=(
-  list-units is-active status show help list-unit-files
-  is-enabled list-jobs show-environment cat
+    list-units is-active status show help list-unit-files
+    is-enabled list-jobs show-environment cat
 )
 
 sudo_commands=(
-  start stop reload restart try-restart isolate kill
-  reset-failed enable disable reenable preset mask unmask
-  link load cancel set-environment unset-environment
-  edit
+    start stop reload restart try-restart isolate kill
+    reset-failed enable disable reenable preset mask unmask
+    link load cancel set-environment unset-environment
+    edit
 )
 
 for c in $user_commands; do; alias sc-$c="systemctl $c"; done
@@ -228,3 +228,9 @@ alias pacmir='sudo reflector -p http -l 50 -f 20 --sort rate --save /etc/pacman.
 # '[r]emove [o]rphans' - recursively remove ALL orphaned packages
 alias pacro="pacman -Qtdq && sudo pacman -Rns $(pacman -Qtdq)"
 alias pacram="pacman -Qtdq && sudo pacman -Rnscd $(pacman -Qtdq)"
+
+case $TERM in
+    xterm*)
+        precmd () {print -Pn "\e]0;%n: %~\a"}
+    ;;
+esac
