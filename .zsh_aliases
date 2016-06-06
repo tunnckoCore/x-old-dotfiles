@@ -52,6 +52,9 @@ eval "$(npm completion 2>/dev/null)"
 # Npm sugars
 alias ni='npm install'
 alias npmi='npm install'
+alias nig='npm install -g'
+alias npmg='npm install -g'
+alias npmG='npm install -g'
 alias nis='npm install --save'
 alias npms='npm install --save'
 alias npmS='npm install --save'
