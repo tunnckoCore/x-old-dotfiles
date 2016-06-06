@@ -17,8 +17,8 @@
 	plain = white
 
 [color "status"]
-	added = yellow
-	changed = green
+	added = green
+	changed = yellow
 	untracked = cyan
 
 [user]
@@ -36,9 +36,6 @@
 [github]
 	username = tunnckoCore
 	token = TOKEN_HERE
-
-[credential]
-	helper = /usr/lib/git-core/git-credential-gnome-keyring
 
 [alias]
 	empty = "!git commit -am\"[empty] Initial commit\" --allow-empty"
