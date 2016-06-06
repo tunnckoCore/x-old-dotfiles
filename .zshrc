@@ -72,33 +72,36 @@ export NVM_DIR="/home/charlike/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Aliases
+##########
 
+# Shugars
 alias home="cd $HOME"
 alias H="cd $HOME"
 alias edit="$EDITOR"
 alias E="$EDITOR"
-alias cov="istanbul cover test.js"
-alias gtok="echo `cat $HOME/.config/.github-token`"
+
+# Github token, requires xclip
+alias gtok="xclip -sel clip < $HOME/.config/.github-token"
+alias gtoken="echo `cat $HOME/.config/.github-token`"
+
+# Utils, nodejs, npm
+alias nr="npm run"
 alias nrt="npm run test"
+alias cov="istanbul cover test.js"
 alias kt="kill-tabs"
 alias new="khaos create new"
 alias stf="standard-format -w"
 alias sf="standard-format -w"
 
+# Git Aliases
 alias g='git'
 alias ga='git add'
 alias gaa='git add --all'
 alias gall='git add --all'
-
-# requires https://github.com/tj/git-extras
-alias gb="git back && git push -f"
-alias gback="git back && git push -f"
-alias gitback="git back && git push -f"
-
 alias gbr='git branch'
-alias gc='git commit -S -v'
-alias gc!='git commit -S -v --amend'
-alias gcm='git commit -S -v -m'
+alias gc='git commit -S'
+alias gc!='git commit -S --amend'
+alias gcm='git commit -S -m'
 alias gcl='git clone'
 alias gco='git checkout'
 alias gcom='git checkout master'
@@ -113,6 +116,13 @@ alias gpum='git push origin master'
 alias gs='git status -sb'
 alias gst='git status'
 
+# requires https://github.com/tj/git-extras
+# curl -sSL http://git.io/git-extras-setup | sudo bash /dev/stdin
+alias gb="git back && git push -f"
+alias gback="git back && git push -f"
+alias gitback="git back && git push -f"
+
+# Git all, signed commit + given message, git push
 gad() {
   if [ $# -eq 0 ]; then
     git add --all && git commit -S -v -m "default commit message" && git push
