@@ -211,6 +211,7 @@ alias yar='yaourt'
 alias yart='yaourt'
 alias pac="sudo pacman -S"        # default action     - install one or more packages
 alias pacu="sudo pacman -Syu"     # '[u]pdate'         - upgrade all packages to their newest version
+alias pacy="sudo pacman -Syyu"    # '[u]pdate force'   - upgrade all packages, force sync mirrors
 alias pacr="sudo pacman -Rs"      # '[r]emove'         - uninstall one or more packages
 alias pacrem="sudo pacman -Rnscd" # '[r]emove [m]ass'  - remove, recursive, cascade, configs, all
 alias pacs="pacman -Ss"           # '[s]earch'         - search for a package using one or more keywords
