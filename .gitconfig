@@ -25,7 +25,7 @@
 	email = mameto_100@mail.bg
 	name = tunnckoCore
 	user = tunnckoCore
-	signingkey = "Charlike Mike Reagent (@tunnckoCore) <mameto_100@mail.bg>"
+	signingkey = 757D6A32
 
 [commit]
 	gpgsign = true
@@ -35,7 +35,7 @@
 
 [github]
 	username = tunnckoCore
-	token = TOKEN_HERE
+	token = GIT_CONFIG_TOKEN_HERE
 
 [alias]
 	empty = "!git commit -am\"[empty] Initial commit\" --allow-empty"
