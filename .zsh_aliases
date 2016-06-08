@@ -22,12 +22,17 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias mv="mv -i"
 alias rm="rm -i"
-alias ls="ls --color=auto -h --group-directories-first"
-alias sl="ls --color=auto -h --group-directories-first"
-alias lsal="ls --color=auto -alh --group-directories-first"
+alias ls="ls --color=auto -h --group-directories-first -F"
+alias sl="ls --color=auto -h --group-directories-first -F"
+alias lsal="ls --color=auto -alh --group-directories-first -F"
+alias grep="grep --color=tty -d skip"
 alias go="xdg-open"
 alias opn="xdg-open"
 alias open="xdg-open"
+alias cp="cp -i"         # confirm before overwriting something
+alias df='df -h'         # human-readable sizes
+alias free='free -m'     # show sizes in MB
+alias fixit='sudo rm -f /var/lib/pacman/db.lck && sudo pacman-mirrors -g && sudo pacman -Syyuu && sudo pacman -Suu'
 
 # replace `*` with `x` to avoid expansion
 math() {       
