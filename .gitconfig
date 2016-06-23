@@ -35,7 +35,7 @@
 
 [github]
 	username = tunnckoCore
-	token = GIT_CONFIG_TOKEN_HERE
+	token = GITHUB_TOKEN_HERE
 
 [alias]
 	empty = "!git commit -am\"[empty] Initial commit\" --allow-empty"
