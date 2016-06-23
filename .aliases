@@ -39,6 +39,8 @@ alias fixit='sudo rm -f /var/lib/pacman/db.lck && sudo pacman-mirrors -g && sudo
 math() {       
     echo "scale=2 ; $*" | sed -e "s:x:*:g" | sed -e "s:,::g" | bc
 }
+
+# @todo calc style like the menu
 # awesome calculator
 calc() {
     xsel -o | dmenu -p "Calculate:" | xargs echo | bc 2>&1 | dmenu -p "Answer:" | xsel -i
