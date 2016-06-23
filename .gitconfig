@@ -25,7 +25,7 @@
 	email = mameto_100@mail.bg
 	name = tunnckoCore
 	user = tunnckoCore
-	signingkey = 757D6A32
+	signingkey = GPG_KEY_HERE
 
 [commit]
 	gpgsign = true

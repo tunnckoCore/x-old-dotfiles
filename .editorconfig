@@ -12,6 +12,10 @@ end_of_line = lf
 indent_size = 2
 indent_style = space
 
+[{.bashrc,.bash_profile,*rc,.zprofile.zshrc,.zsh_aliases}]
+indent_size = 4
+indent_style = space
+
 [*.js]
 insert_final_newline = true
 trim_trailing_whitespace = true
