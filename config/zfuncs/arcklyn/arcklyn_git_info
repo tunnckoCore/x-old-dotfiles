@@ -1,0 +1,31 @@
+if [ -n "$__CURRENT_GIT_BRANCH" ]; then
+    local str=${ARCKLYN_GIT_BEFORE_BRANCH:-""}
+    str+=${ARCKLYN_GIT_BRANCH:-"$__CURRENT_GIT_BRANCH"}
+    str+=${ARCKLYN_GIT_AFTER_BRANCH:-""}
+
+    case "$__CURRENT_GIT_BRANCH_STATUS" in
+        "ahead")
+        # str+="↑"
+        str+=${ARCKLYN_GIT_AHEAD-"↑"}
+        ;;
+        "diverged")
+        # str+="↕"
+        str+=${ARCKLYN_GIT_DIVERGED-"↕"}
+        ;;
+        "up-to-date")
+        # str+="✓"
+        str+=${ARCKLYN_GIT_CLEAN-"✓"}
+        ;;
+        "behind")
+        # str+="↓"
+        str+=${ARCKLYN_GIT_BEHIND-"↓"}
+        ;;
+    esac
+    if [ -n "$__CURRENT_GIT_BRANCH_IS_DIRTY" ]; then
+        # str+="✗"
+        str+=${ARCKLYN_GIT_DIRTY:-"✗"}
+    fi
+    str+=${ARCKLYN_GIT_AFTER:=""}
+
+    printf "%s" $str
+fi
