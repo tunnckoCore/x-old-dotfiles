@@ -1,6 +1,7 @@
 # ~/.zshrc, ZSH 5.2+
 # Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
 # Release under the MIT License, 2016
+screenfetch
 
 case $TERM in
     xterm*)
