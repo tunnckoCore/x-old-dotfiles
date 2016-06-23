@@ -43,18 +43,18 @@ chpwd_functions+="arcklyn_update_git_vars"
 
 # Theming
 ARCKLYN_GIT_AFTER_BRANCH=" %B"
-ARCKLYN_GIT_AHEAD="%F{blue}↑%f"
-ARCKLYN_GIT_DIVERGED="%F{magenta}↕%f"
-ARCKLYN_GIT_CLEAN="%F{green}✓%f"
-ARCKLYN_GIT_BEHIND="%F{yellow}↓%f"
-ARCKLYN_GIT_DIRTY="%F{red}✗%f"
+ARCKLYN_GIT_AHEAD="%F{blue} %f"
+ARCKLYN_GIT_DIVERGED="%F{magenta} %f"
+ARCKLYN_GIT_CLEAN="%F{green} %f"
+ARCKLYN_GIT_BEHIND="%F{yellow} %f"
+ARCKLYN_GIT_DIRTY="%F{red} %f"
 ARCKLYN_GIT_AFTER="%b"
 
 # Awesome prompt
 PROMPT_NEWLINE=$'\n'
 PROMPT_LINE2='%B%(?.%F{green}%# ❯.%F{red}%# %? ❯)%f%b '
 PROMPT=$'%B%F{cyan}%~%f $(arcklyn_git_info) ${PROMPT_NEWLINE}${PROMPT_LINE2}%b'
-RPROMPT=$'%B%F{blue}[%f$(date +"%B %d, %H:%M:%S")%F{blue}]%f%b'
+RPROMPT=$'%B%F{blue} %f$(date +"%B %d") %F{blue} %f$(date +"%H:%M:%S")%b'
 
 # Bindings
 bindkey "^[[3~" delete-char
@@ -79,4 +79,4 @@ export NVM_DIR="/home/charlike/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Aliases
-[ -s "$HOME/.zsh_aliases" ] && . "$HOME/.zsh_aliases"
+[ -s "$HOME/.aliases" ] && . "$HOME/.aliases"
