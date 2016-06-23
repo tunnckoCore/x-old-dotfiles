@@ -2,8 +2,8 @@
 MiscAlwaysShowTabs=FALSE
 MiscBell=TRUE
 MiscBordersDefault=FALSE
-MiscCursorBlinks=FALSE
-MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
+MiscCursorBlinks=TRUE
+MiscCursorShape=TERMINAL_CURSOR_SHAPE_UNDERLINE
 MiscDefaultGeometry=80x24
 MiscInheritGeometry=FALSE
 MiscMenubarDefault=FALSE
@@ -20,4 +20,6 @@ BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 FontName=Noto Mono 12
 ScrollingLines=5000
 TitleMode=TERMINAL_TITLE_REPLACE
+BackgroundDarkness=0.550000
+TabActivityTimeout=5
 
