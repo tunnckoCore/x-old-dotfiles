@@ -9,6 +9,7 @@ case $TERM in
 esac
 
 # Exports
+export XDG_CONFIG_HOME="$HOME/.config"
 export ZFUNCS="$HOME/.config/zfuncs"
 export EDITOR="subl3"
 export GIT_CONFIG_USERNAME="tunnckoCore"
@@ -46,8 +47,10 @@ ARCKLYN_GIT_AFTER_BRANCH=" %B"
 ARCKLYN_GIT_AHEAD="%F{blue} %f"
 ARCKLYN_GIT_DIVERGED="%F{magenta} %f"
 ARCKLYN_GIT_CLEAN="%F{green} %f"
+# ARCKLYN_GIT_CLEAN="%F{green}✓ %f"
 ARCKLYN_GIT_BEHIND="%F{yellow} %f"
 ARCKLYN_GIT_DIRTY="%F{red} %f"
+# ARCKLYN_GIT_DIRTY="%F{red}✗ %f"
 ARCKLYN_GIT_AFTER="%b"
 
 # Awesome prompt
