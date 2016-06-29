@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Check for weather with AccuWeather XML API
 # 
 # Pass first argument for `locCode`
