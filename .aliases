@@ -30,6 +30,7 @@ alias grep="grep --color=tty -d skip"
 alias go="xdg-open"
 alias opn="xdg-open"
 alias open="xdg-open"
+alias sk="screenkey"
 alias cp="cp -i"         # confirm before overwriting something
 alias df='df -h'         # human-readable sizes
 alias free='free -m'     # show sizes in MB
