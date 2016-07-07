@@ -13,6 +13,10 @@ esac
 
 vol=$(amixer get 'Master' | grep Mono: | sed 's/ *Mono: .* \[\([^ ]*\)\] \[[^ ]*\] \[\([^ ]*\)\]/\1 \2/;s/.*off/off/;s/\([^ ]*\).*/\1/')
 
+if [ "$vol" == "off" ]; then
+  echo "off"
+fi
+
 echo $vol
 echo $vol
 echo ""
