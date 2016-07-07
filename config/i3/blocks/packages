@@ -5,9 +5,9 @@
 # pass `instance=yaourt` for checking with yaourt
 
 MANAGER=${BLOCK_INSTANCE:-"pacman"}
-PACKAGES=$(MANAGER -Qu)
+PACKAGES=$($MANAGER -Qu)
 
-URGENT_VALUE=25
+URGENT_VALUE=10
 
 if [[ $? -gt 0 ]]; then
   return

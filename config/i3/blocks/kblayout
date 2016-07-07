@@ -1,4 +1,24 @@
 #!/bin/bash
-# check keyboard layouts
+# https://github.com/KabbAmine/myDotFiles/blob/master/i3/blocklets/layout
+####################################################
+# CREATION     : 2016-06-01
+# MODIFICATION : 2016-06-01
 
-[[ $(xkblayout-state print "%c") == "1" ]] && echo "bg" || echo "en"
+# https://aur.archlinux.org/packages/xkblayout-state/
+# i3block's blocklet which using xkblayout-state:
+# - Display current keyboard layout
+# - Set next/previous layout with the mouse
+####################################################
+
+case $BLOCK_BUTTON in
+    1) xkblayout-state set -1;;  # left button toggle click
+    1) xkblayout-state set +1;;  # left button toggle click
+    4) xkblayout-state set -1;;  # wheel up
+    5) xkblayout-state set +1;;  # wheel down
+esac
+
+layout=$(xkblayout-state print %s)
+
+echo "$layout"
+echo "$layout"
+echo
