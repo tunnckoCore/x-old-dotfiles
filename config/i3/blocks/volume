@@ -1,3 +1,18 @@
 #!/bin/bash
+
+# i3block which:
+# - Increase/decrease volume with the mouse wheel
+# - Mute/unmute with a left click
+####################################################
+#
+case $BLOCK_BUTTON in
+    1) amixer -q set Master toggle;;        # left click
+    4) amixer -q set Master '4%+' unmute;;  # wheel up
+    5) amixer -q set Master '4%-' unmute;;  # wheel down
+esac
+
 vol=$(amixer get 'Master' | grep Mono: | sed 's/ *Mono: .* \[\([^ ]*\)\] \[[^ ]*\] \[\([^ ]*\)\]/\1 \2/;s/.*off/off/;s/\([^ ]*\).*/\1/')
+
 echo $vol
+echo $vol
+echo ""
