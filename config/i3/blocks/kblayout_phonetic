@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# Use `sed` to set us/bg to us/phonetic layout.
+# Remember to restart/reload i3 to take effect.
+# 
+# 
+# the line:
+# 
+# setxkbmap -layout "us,bg" -option "grp:alt_shift_toggle"
+# 
+# to line:
+# 
+# setxkbmap -layout "us,bg(phonetic)" -option "grp:alt_shift_toggle"
+
+conf="$HOME/.config/i3/config.conf"
+val=$(sed 's/us,bg"/us,bg(phonetic)"/g' $conf)
+echo -e "$val" > $conf
