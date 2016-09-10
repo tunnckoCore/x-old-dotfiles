@@ -23,6 +23,7 @@ alias .....="cd ../../../.."
 alias mv="mv -i"
 alias rm="rm -i"
 alias ls="ls --color=auto -h --group-directories-first -F"
+alias lso="ls --color=auto -h --group-directories-first -F"
 alias sl="ls --color=auto -h --group-directories-first -F"
 alias lsal="ls --color=auto -alh --group-directories-first -F"
 alias ll="ls --color=auto -alh --group-directories-first -F"
@@ -55,13 +56,13 @@ alias gtoken="echo `cat $HOME/.config/.github-token`"
 alias cov="istanbul cover test.js"
 alias kt="kill-tabs"
 alias new="khaos create new"
-alias stf="standard-format -w"
-alias sf="standard-format -w"
+alias sv="standard-version --sign"
 
 # Loads npm completion
 eval "$(npm completion 2>/dev/null)"
 
 # Npm sugars
+alias npm='npm --silent'
 alias ni='npm install'
 alias npmi='npm install'
 alias nig='npm install -g'
@@ -83,9 +84,11 @@ alias nlk='npm link'
 alias nod='npm outdated'
 alias npmU='npm update'
 alias nr='npm run'
+alias nrr='npm run release'
 alias nrt='npm run test'
 alias nls='npm list'
 alias nlsg='npm list --global'
+#nrs() { script="$1"; shift; npm --silent run-script "$script" -- "$@";}
 
 # Git Aliases
 alias g="git"
@@ -123,9 +126,9 @@ alias gitback="git back && git push -f"
 # Git all, signed commit + given message, git push
 gad() {
     if [ $# -eq 0 ]; then
-        git add --all && git commit -S -v -m "default commit message" && git push
+        git add --all && git commit -S -v -m "default commit message"
     else
-        git add --all && git commit -S -v -m "$1" && git push
+        git add --all && git commit -S -v -m "$1"
     fi
 }
 
