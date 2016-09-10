@@ -2,6 +2,7 @@
 # Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
 # Release under the MIT License, 2016
 screenfetch
+cd ~/dev
 
 case $TERM in
     xterm*)
@@ -24,8 +25,18 @@ git config --global user.email "$GIT_CONFIG_USERMAIL"
 git config --global push.default simple
 git config --global github.token "$GIT_CONFIG_TOKEN"
 
+GIT_EDITOR=nano
+
 # Options
 setopt PROMPT_SUBST
+
+## History
+HISTFILE=$HOME/.zhistory       # enable history saving on shell exit
+HISTSIZE=3000                  # lines of history to maintain memory
+SAVEHIST=3000                  # lines of history to maintain in history file.
+setopt APPEND_HISTORY          # append rather than overwrite history file.
+setopt EXTENDED_HISTORY        # save timestamp and runtime information
+setopt HIST_IGNORE_DUPS
 
 # Autoloads
 autoload -Uz compinit && compinit
@@ -47,20 +58,21 @@ chpwd_functions+="arcklyn_update_git_vars"
 ARCKLYN_GIT_AFTER_BRANCH=" %B"
 ARCKLYN_GIT_AHEAD="%F{blue} %f"
 ARCKLYN_GIT_DIVERGED="%F{magenta} %f"
-ARCKLYN_GIT_CLEAN="%F{green} %f"
-# ARCKLYN_GIT_CLEAN="%F{green}✓ %f"
+# ARCKLYN_GIT_CLEAN="%F{green} %f"
+ARCKLYN_GIT_CLEAN="%F{green}✓ %f"
 ARCKLYN_GIT_BEHIND="%F{yellow} %f"
-ARCKLYN_GIT_DIRTY="%F{red} %f"
-# ARCKLYN_GIT_DIRTY="%F{red}✗ %f"
+# ARCKLYN_GIT_DIRTY="%F{red} %f"
+ARCKLYN_GIT_DIRTY="%F{red}✗ %f"
 ARCKLYN_GIT_AFTER="%b"
 
 # Awesome prompt
 PROMPT_NEWLINE=$'\n'
 PROMPT_LINE2='%B%(?.%F{green}%# ❯.%F{red}%# %? ❯)%f%b '
 PROMPT=$'%B%F{cyan}%~%f $(arcklyn_git_info) ${PROMPT_NEWLINE}${PROMPT_LINE2}%b'
-RPROMPT=$'%B%F{blue} %f$(date +"%B %d") %F{blue} %f$(date +"%H:%M:%S")%b'
+# RPROMPT=$'%B%F{blue} %f$(date +"%B %d") %F{blue} %f$(date +"%H:%M:%S")%b'
+RPROMPT=$'%B%F{blue} %f$(date +"%B %d"), $(date +"%H:%M:%S")%b'
 
-# Bindings
+# # Bindings
 bindkey "^[[3~" delete-char
 bindkey "\C^?" backword-delete-word
 bindkey "^[[3;5~" kill-word
