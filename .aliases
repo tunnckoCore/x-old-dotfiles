@@ -88,6 +88,7 @@ alias nrr='npm run release'
 alias nrt='npm run test'
 alias nls='npm list'
 alias nlsg='npm list --global'
+alias npmcc='npm cache clean'
 #nrs() { script="$1"; shift; npm --silent run-script "$script" -- "$@";}
 
 # Git Aliases
@@ -116,6 +117,7 @@ alias gpu="git push"
 alias gpum="git push origin master"
 alias gs="git status -sb"
 alias gst="git status"
+alias gcz="git cz"
 
 # requires https://github.com/tj/git-extras
 # curl -sSL http://git.io/git-extras-setup | sudo bash /dev/stdin
@@ -125,11 +127,11 @@ alias gitback="git back && git push -f"
 
 # Git all, signed commit + given message, git push
 gad() {
-    if [ $# -eq 0 ]; then
-        git add --all && git commit -S -v -m "default commit message"
-    else
-        git add --all && git commit -S -v -m "$1"
-    fi
+#    if [ $# -eq 0 ]; then
+#        git add --all && git commit -S -v -m "default commit message"
+#    else
+        git add --all && git cz
+#    fi
 }
 
 # Systemd sugars
