@@ -1,0 +1,25 @@
+#!/bin/bash
+# see: https://github.com/Anachron/i3blocks/blob/master/blocks/packages
+# 
+# check for updates
+# pass `instance=yaourt` for checking with yaourt
+
+MANAGER=${BLOCK_INSTANCE:-"pacman"}
+PACKAGES=$($MANAGER -Qu)
+
+URGENT_VALUE=10
+
+if [[ $? -gt 0 ]]; then
+  return
+fi
+
+PACKAGE_COUNT=$(echo -n "${PACKAGES}" | wc -l)
+
+if [[ "${PACKAGE_COUNT}" -gt 0 ]]; then
+  echo "${PACKAGE_COUNT}" # full-text
+  echo "${PACKAGE_COUNT}" # short-text
+  echo ""
+  if [[ "${PACKAGE_COUNT}" -gt "${URGENT_VALUE}" ]]; then
+    exit 33
+  fi
+fi
