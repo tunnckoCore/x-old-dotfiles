@@ -35,7 +35,7 @@ alias chown="chown --preserve-root"
 alias chmod="chmod --preserve-root"
 alias chgrp="chgrp --preserve-root"
 
-alias mkcd="mkdirpcd() { mkdir -p "$@" && cd "$@"; } mkdirpcd"
+# alias mkcd="mkcd() { mkdir "$@" && cd "$@"; } mkcd"
 alias ,,="cd .."
 alias ..="cd .."
 alias ...="cd ../.."
@@ -119,6 +119,9 @@ alias git="hub"
 alias gall="git add --all"
 alias gcmsg="git commit -S -m"
 alias gl="git log"
+alias gp="git push"
+alias gpl="git pull"
+alias gplm="git pull origin master"
 alias gcl="git clone"
 alias gco="git checkout"
 alias gcom="git checkout master"
@@ -229,3 +232,20 @@ alias pacmir='sudo reflector -p http -l 50 -f 20 --sort rate --save /etc/pacman.
 # '[r]emove [o]rphans' - recursively remove ALL orphaned packages
 alias pacro="pacman -Qtdq && sudo pacman -Rns $(pacman -Qtdq)"
 alias pacram="pacman -Qtdq && sudo pacman -Rnscd $(pacman -Qtdq)"
+
+# Creating repository and open it
+# in your default browser.
+#
+# Usage: repo repoName repoDescription
+repo() {
+  mkdir $1
+  cd $1
+  touch .gitkeep
+  git init
+  gall
+  gcmsg 'Initial commit'
+  gcr -d $2
+  gp -u origin master
+  echo "Excellent! Now run your generator to scaffold package files."
+  gws
+}
