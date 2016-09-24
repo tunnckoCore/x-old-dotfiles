@@ -1,7 +1,7 @@
 # ~/.zshrc, ZSH 5.2+
 # Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
 # Release under the MIT License, 2016
-screenfetch
+alsi
 cd ~/dev
 
 case $TERM in
@@ -14,6 +14,7 @@ esac
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZFUNCS="$HOME/.config/zfuncs"
 export EDITOR="subl3"
+export GIT_EDITOR="nano"
 export GIT_CONFIG_USERNAME="tunnckoCore"
 export GIT_CONFIG_USERMAIL="mameto_100@mail.bg"
 export GIT_CONFIG_TOKEN="`cat $HOME/.config/.github-token`"
@@ -24,8 +25,9 @@ git config --global user.user "$GIT_CONFIG_USERNAME"
 git config --global user.email "$GIT_CONFIG_USERMAIL"
 git config --global push.default simple
 git config --global github.token "$GIT_CONFIG_TOKEN"
-
-GIT_EDITOR=nano
+git config --global github.username "$GIT_CONFIG_USERNAME"
+git config --global commit.gpgsign true
+git config --global push.followTags true
 
 # Options
 setopt PROMPT_SUBST
@@ -37,6 +39,8 @@ SAVEHIST=3000                  # lines of history to maintain in history file.
 setopt APPEND_HISTORY          # append rather than overwrite history file.
 setopt EXTENDED_HISTORY        # save timestamp and runtime information
 setopt HIST_IGNORE_DUPS
+setopt extendedglob notify
+unsetopt beep
 
 # Autoloads
 autoload -Uz compinit && compinit
@@ -78,6 +82,7 @@ bindkey "\C^?" backword-delete-word
 bindkey "^[[3;5~" kill-word
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey -e
 
 # ctrl-p ctrl-n history navigation
 bindkey "^P" up-history
@@ -89,6 +94,12 @@ bindkey "^h" backward-delete-char
 
 # ctrl-r starts searching history backward
 bindkey "^r" history-incremental-search-backward
+
+zstyle ':completion:*' completer _complete _ignored _approximate
+zstyle ':completion:*' max-errors 4 numeric
+zstyle ':completion:*' prompt 'ehh... error?!'
+zstyle ':completion:*' rehash true
+zstyle :compinstall filename "$HOME/.zshrc"
 
 # nvm, Nodejs
 export NVM_DIR="/home/charlike/.nvm"

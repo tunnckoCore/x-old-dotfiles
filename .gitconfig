@@ -25,18 +25,17 @@
 	email = mameto_100@mail.bg
 	name = tunnckoCore
 	user = tunnckoCore
-	signingkey = E601C04EAE3EEEF29F89385B0492088D20358042
+	signingkey = XXX
 
 [commit]
-  gpgsign = true
+	gpgsign = true
 
 [push]
-	default = simple
-  followTags = true
+	followTags = true
 
 [github]
 	username = tunnckoCore
-	token = cd0a4e95c598b8ec1a6945623a47cb5f43b65e69
+	token = XXX
 
 [alias]
 	empty = "!git commit -am\"[empty] Initial commit\" --allow-empty"
