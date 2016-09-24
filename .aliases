@@ -13,6 +13,28 @@ alias cl="clear"
 alias clr="clear"
 alias c="clear"
 alias C="clear"
+
+# http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
+alias path="echo -e ${PATH//:/\\n}"
+alias now="date +'%T'"
+alias nowtime=now
+alias nowdate="date +'%d-%m-%Y'"
+alias mkdir="mkdir -pv"
+alias ports="netstat -tulanp"
+
+# do not delete / or prompt if deleting more than 3 files at a time #
+alias rm="rm -i --preserve-root"
+
+# confirmation #
+alias mv="mv -i"
+alias cp="cp -i"
+alias ln="ln -i"
+
+# Parenting changing perms on / #
+alias chown="chown --preserve-root"
+alias chmod="chmod --preserve-root"
+alias chgrp="chgrp --preserve-root"
+
 alias mkcd="mkdirpcd() { mkdir -p "$@" && cd "$@"; } mkdirpcd"
 alias ,,="cd .."
 alias ..="cd .."
@@ -20,15 +42,12 @@ alias ...="cd ../.."
 alias ,,,="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias mv="mv -i"
-alias rm="rm -i"
 alias ls="ls --color=auto -h --group-directories-first -F"
 alias lso="ls --color=auto -h --group-directories-first -F"
 alias sl="ls --color=auto -h --group-directories-first -F"
 alias lsal="ls --color=auto -alh --group-directories-first -F"
 alias ll="ls --color=auto -alh --group-directories-first -F"
 alias grep="grep --color=tty -d skip"
-alias go="xdg-open"
 alias opn="xdg-open"
 alias open="xdg-open"
 alias sk="screenkey"
@@ -38,7 +57,7 @@ alias free='free -m'     # show sizes in MB
 alias fixit='sudo rm -f /var/lib/pacman/db.lck && sudo pacman-mirrors -g && sudo pacman -Syyuu && sudo pacman -Suu'
 
 # replace `*` with `x` to avoid expansion
-math() {       
+math() {
     echo "scale=2 ; $*" | sed -e "s:x:*:g" | sed -e "s:,::g" | bc
 }
 
@@ -60,6 +79,10 @@ alias sv="standard-version --sign"
 
 # Loads npm completion
 eval "$(npm completion 2>/dev/null)"
+
+# requires `xsel`
+alias pbcopy="xsel --clipboard --input"
+alias pbpaste="xsel --clipboard --output"
 
 # Npm sugars
 alias npm='npm --silent'
@@ -91,48 +114,76 @@ alias nlsg='npm list --global'
 alias npmcc='npm cache clean'
 #nrs() { script="$1"; shift; npm --silent run-script "$script" -- "$@";}
 
-# Git Aliases
-alias g="git"
-alias ga="git add"
-alias gaa="git add --all"
+# Alias `git` as `github/hub`
+alias git="hub"
 alias gall="git add --all"
-alias gbr="git branch"
-alias gc="git commit -S"
-alias gc!="git commit -S --amend"
-alias gcm="git commit -S -m"
+alias gcmsg="git commit -S -m"
+alias gl="git log"
 alias gcl="git clone"
 alias gco="git checkout"
 alias gcom="git checkout master"
 alias gcob="git checkout -b"
-alias gac="gall && gcm"
-alias gl="git log"
-alias glo="git log --oneline --decorate --color"
-alias glg="git log --oneline --decorate --color --graph"
 alias glog="git log --oneline --decorate --color --graph"
-alias gpl="git pull"
-alias gplm="git pull origin master"
-alias gp="git push"
-alias gpm="git push origin master"
-alias gpu="git push"
-alias gpum="git push origin master"
 alias gs="git status -sb"
 alias gst="git status"
+
+ # requires `github/hub`
+alias gws="git browse"
+alias grl="git release"
+alias gcr="git create"
+alias gpr="git pull-request"
+alias gcis="git ci-status"
+alias gf="git fork"
+
+# commitizen
 alias gcz="git cz"
+
+
+# Git Aliases
+# temporary commented
+# alias g="git"
+# alias ga="git add"
+# alias gaa="git add --all"
+# alias gall="git add --all"
+# alias gbr="git branch"
+# alias gc="git commit -S"
+# alias gc!="git commit -S --amend"
+# alias gcm="git commit -S -m"
+# alias gcl="git clone"
+# alias gco="git checkout"
+# alias gcom="git checkout master"
+# alias gcob="git checkout -b"
+# alias gac="gall && gcm"
+# alias gl="git log"
+# alias glo="git log --oneline --decorate --color"
+# alias glg="git log --oneline --decorate --color --graph"
+# alias glog="git log --oneline --decorate --color --graph"
+# alias gpl="git pull"
+# alias gplm="git pull origin master"
+# alias gp="git push"
+# alias gpm="git push origin master"
+# alias gpu="git push"
+# alias gpum="git push origin master"
+# alias gs="git status -sb"
+# alias gst="git status"
+# alias gcz="git cz"
 
 # requires https://github.com/tj/git-extras
 # curl -sSL http://git.io/git-extras-setup | sudo bash /dev/stdin
-alias gb="git back && git push -f"
-alias gback="git back && git push -f"
-alias gitback="git back && git push -f"
+#
+# temporary: `github/hub` may conflict with `git-extras`
+# alias gb="git back && git push -f"
+# alias gback="git back && git push -f"
+# alias gitback="git back && git push -f"
 
 # Git all, signed commit + given message, git push
-gad() {
-#    if [ $# -eq 0 ]; then
-#        git add --all && git commit -S -v -m "default commit message"
-#    else
-        git add --all && git cz
-#    fi
-}
+# gad() {
+# #    if [ $# -eq 0 ]; then
+# #        git add --all && git commit -S -v -m "default commit message"
+# #    else
+#         git add --all && git cz
+# #    fi
+# }
 
 # Systemd sugars
 user_commands=(
