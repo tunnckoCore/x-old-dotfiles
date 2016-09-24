@@ -18,6 +18,8 @@ export GIT_EDITOR="nano"
 export GIT_CONFIG_USERNAME="tunnckoCore"
 export GIT_CONFIG_USERMAIL="mameto_100@mail.bg"
 export GIT_CONFIG_TOKEN="`cat $HOME/.config/.github-token`"
+export GOPATH="$HOME/.golang"
+export PATH="$GOPATH/bin:$PATH"
 
 # gitconfig
 git config --global user.name "$GIT_CONFIG_USERNAME"
@@ -52,7 +54,7 @@ autoload -Uz $ZFUNCS/arcklyn/*(:t)
 typeset -ga preexec_functions
 typeset -ga precmd_functions
 typeset -ga chpwd_functions
- 
+
 # Append git functions needed for prompt.
 preexec_functions+="arcklyn_update_git_vars"
 precmd_functions+="arcklyn_update_git_vars"
@@ -74,7 +76,7 @@ PROMPT_NEWLINE=$'\n'
 PROMPT_LINE2='%B%(?.%F{green}%# ❯.%F{red}%# %? ❯)%f%b '
 PROMPT=$'%B%F{cyan}%~%f $(arcklyn_git_info) ${PROMPT_NEWLINE}${PROMPT_LINE2}%b'
 # RPROMPT=$'%B%F{blue} %f$(date +"%B %d") %F{blue} %f$(date +"%H:%M:%S")%b'
-RPROMPT=$'%B%F{blue} %f$(date +"%B %d"), $(date +"%H:%M:%S")%b'
+RPROMPT=$'%B%F{blue} %f$(date +"%B %d, %H:%M:%S")%b'
 
 # # Bindings
 bindkey "^[[3~" delete-char
