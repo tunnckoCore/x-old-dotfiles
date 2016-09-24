@@ -12,7 +12,7 @@
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: SETTINGS ::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 :root {
   --background-color-0: #1f222d;
-  --background-color-1: #2b303b;
+  --background-color-1: #252936;
   
   --main-nav-bg-color: var(--background-color-1);
   --main-url-bg-color: var(--background-color-0);
@@ -98,18 +98,18 @@
 
 /* HIDES PLUGINS NOTIFICATION ICON THAT MAY CHANGE ADDRESS BAR'S HEIGHT */
 #plugins-notification-icon {
-	display: none !important;
+  display: none !important;
 }
 
 /* REMOVES VS SEPARATOR */
 #browser-bottombox {
-	border: none !important;
+  border: none !important;
 }
 
 /* BORDERLESS*/
 #browser-border-end, #browser-border-start {
   background:  transparent !important;
-	border-left: 0px solid var(--main-page-border-color)!important;
+  border-left: 0px solid var(--main-page-border-color)!important;
 }
 
 #browser-bottombox {
@@ -118,29 +118,29 @@
 }
   
 #browser-border-end, #browser-border-start {
-	/*display: none !important;*/
+  /*display: none !important;*/
 }
 
 /* BORDERLESS EFFECT FOR BORDERLESS VS */
 #main-window {
-	-moz-appearance: -moz-win-borderless-glass !important;
-	-moz-appearance: -moz-win-glass !important;
+  -moz-appearance: -moz-win-borderless-glass !important;
+  -moz-appearance: -moz-win-glass !important;
 }
   
 /*===================================================================
   HIDES BACKGROUND EFFECT ON HOVER AND ACTIVE MENU BUTTON  
   ====================================================================*/
 .toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-container {
-	background: none !important;
-	border: none !important;
-	box-shadow: none !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /*===============================================
   HIDES ANNOYING ELEMENTS ON ADDRESS BAR  
   ===============================================*/
 #addonbar-closebutton, #feed-button, #go-button,#star-button, .autocomplete-history-dropmarker, .scrollbutton-up, .scrollbutton-down {
-	/*display: none!important;*/
+  /*display: none!important;*/
 }
 
   /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: NAVIGATION / URL ::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
@@ -152,13 +152,13 @@
   border: 0px solid var(--main-theme-border-color) !important;
   border-bottom: 0px solid var(--main-theme-border-color)!important;
   border-radius: 0px 0px 0px 0px !important;
-	margin-top: -1px !important;
-	margin-left: 0px !important;
-	margin-right: 0px !important;
-	margin-bottom: 0px !important;
-	padding: 8px 0px 6px 0px !important;
+  margin-top: -1px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  margin-bottom: 0px !important;
+  padding: 8px 0px 6px 0px !important;
   height: var(--main-navbar-height)!important;
-	box-shadow: none !important;
+  box-shadow: none !important;
   color: var(--main-url-text-color) !important;
 }
 
@@ -172,18 +172,18 @@
 
 #urlbar {
   height: 28px !important;
-	padding: 4px !important;
+  padding: 4px !important;
   padding-left: 10px !important;
-	text-align: center !important;
-	margin-top: 0px !important;
-	margin-bottom: 2px !important;
-	margin-left: var(--main-show-url-bar-margin-left) !important;
-	margin-right: 6px !important;
-	border-top: 0px solid #2D2D2D!important;
-	border-bottom: 0px solid #2D2D2D!important;
-	border-left: 0px solid #2D2D2D!important;
-	border-right: 0px solid #2D2D2D!important;
-	box-shadow: none !important;
+  text-align: center !important;
+  margin-top: 0px !important;
+  margin-bottom: 2px !important;
+  margin-left: var(--main-show-url-bar-margin-left) !important;
+  margin-right: 6px !important;
+  border-top: 0px solid #2D2D2D!important;
+  border-bottom: 0px solid #2D2D2D!important;
+  border-left: 0px solid #2D2D2D!important;
+  border-right: 0px solid #2D2D2D!important;
+  box-shadow: none !important;
   color: var(--main-url-text-color)!important;
   font-family: var(--main-font-family) !important;
   font-size: var(--main-theme-font-size) !important;
@@ -233,42 +233,42 @@
   /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: SEARCHBAR ::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
   
 #searchbar .search-go-button {
-	visibility: hidden !important;
+  visibility: hidden !important;
 }
 
 #searchbar .searchbar-dropmarker-image {
-	display: none !important;
+  display: none !important;
 }
 
 #searchbar .searchbar-engine-image {
-	width: 0 !important;
-	padding-left: 18px !important;
-	margin-left: -20px !important;
-	margin-top: 0px !important;
-	margin-bottom: 0px !important;
-	margin-right: 2px !important;
+  width: 0 !important;
+  padding-left: 18px !important;
+  margin-left: -20px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  margin-right: 2px !important;
 }
 
 #searchbar .searchbar-textbox {
   padding: 2px;
-	text-align: center !important;
-	margin-top: 7px !important;
-	margin-bottom: 7px !important;
-	margin-left: 1px !important;
-	margin-right: 5px !important;
-	border-top: 0px solid #2D2D2D!important;
-	border-bottom: 0px solid #2D2D2D!important;
-	border-left: 0px solid #2D2D2D!important;
-	border-right: 0px solid #2D2D2D!important;
-	padding-left: 5px !important;
-	box-shadow: none !important;
+  text-align: center !important;
+  margin-top: 7px !important;
+  margin-bottom: 7px !important;
+  margin-left: 1px !important;
+  margin-right: 5px !important;
+  border-top: 0px solid #2D2D2D!important;
+  border-bottom: 0px solid #2D2D2D!important;
+  border-left: 0px solid #2D2D2D!important;
+  border-right: 0px solid #2D2D2D!important;
+  padding-left: 5px !important;
+  box-shadow: none !important;
   color: var(--main-url-text-color)!important;
   font-family: var(--main-font-family) !important;
   font-size: var(--main-theme-font-size) !important;
 }
 
 #urlbar, #searchbar .searchbar-textbox {
-	border-radius: var(--main-border-radius) !important;
+  border-radius: var(--main-border-radius) !important;
 }
   
 #PersonalToolbar {
@@ -410,7 +410,7 @@ toolbarbutton#new-tab-button,
 
 /* Show the close button and hide the throbber/favicon on tab hover */
 .tabbrowser-tab .tab-close-button .toolbarbutton-icon {
-	/*display: block !important;*/
+  /*display: block !important;*/
   /*background: #2c2c2c !important;*/
   /*width: 35px !important;*/
 }
