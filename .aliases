@@ -16,7 +16,7 @@ alias C="clear"
 
 # http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
 alias path="echo -e ${PATH//:/\\n}"
-alias now="date +'%T'"
+#alias now="date +'%T'"
 alias nowtime=now
 alias nowdate="date +'%d-%m-%Y'"
 alias mkdir="mkdir -pv"
@@ -86,6 +86,7 @@ alias pbpaste="xsel --clipboard --output"
 
 # Npm sugars
 alias npm='npm --silent'
+alias npmloud='npm'
 alias ni='npm install'
 alias npmi='npm install'
 alias nig='npm install -g'
@@ -248,4 +249,6 @@ repo() {
   gp -u origin master
   echo "Excellent! Now run your generator to scaffold package files."
   gws
+  echo "Deleting '.gitkeep' file..."
+  rm -rf .gitkeep
 }
