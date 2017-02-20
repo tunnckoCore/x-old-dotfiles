@@ -25,4 +25,13 @@ ColorPalette=#000000;#cc0000;#4e9a06;#c4a000;#3465a4;#75507b;#06989a;#d3d7cf;#55
 ColorCursor=#d5d5d5d5d5d5
 TabActivityColor=#4ea8ffff1bd0
 ScrollingOnOutput=FALSE
+MiscBellUrgent=FALSE
+MiscMouseWheelZoom=TRUE
+MiscMiddleClickOpensUri=FALSE
+MiscCopyOnSelect=FALSE
+MiscDefaultWorkingDir=
+MiscRewrapOnResize=TRUE
+MiscUseShiftArrowsToScroll=FALSE
+MiscSlimTabs=FALSE
+ScrollingBar=TERMINAL_SCROLLBAR_NONE
 
