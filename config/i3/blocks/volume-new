@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# i3block which:
+# - Increase/decrease volume with the mouse wheel
+# - Mute/unmute with a left click
+####################################################
+
+# if amixer -c 0 get Master | grep -q off
+# then
+#     amixer set Master unmute
+#     amixer set PCM unmute
+
+# else
+#     amixer set Master mute
+# fi
+
+case $BLOCK_BUTTON in
+    1) amixer -q set Master toggle;;        # left click
+    4) amixer -q set Master '4%+' unmute;;  # wheel up
+    5) amixer -q set Master '4%-' unmute;;  # wheel down
+esac
+
+# Front Left: Playback 65536 [100%] [on]
+
+volIcon=
+volPercentage=$(amixer get 'Master' | grep "Front Left:" | awk '{print $5}' | sed 's/[^0-9\%]//g')
+volOnOff=$(amixer get 'Master' | grep "Front Left:" | awk '{print $6}' | sed 's/[^a-z]//g')
+
+if [ "$volPercentage" == "0%" ] || [ "$volOnOff" == "off" ] ; then
+  echo "$volIcon off"
+  echo "$volIcon off"
+  echo ""
+  exit 33
+fi
+
+echo "$volIcon $volPercentage"
+echo "$volIcon $volPercentage"
+echo ""
+# vol=1
+# echo $vol
+# echo $vol
+# echo ""
