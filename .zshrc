@@ -2,7 +2,6 @@
 # Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
 # Release under the MIT License, 2016
 alsi
-cd ~/dev
 
 case $TERM in
     xterm*)
@@ -13,8 +12,8 @@ esac
 # Exports
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZFUNCS="$HOME/.config/zfuncs"
-export EDITOR="subl3"
-export GIT_EDITOR="nano"
+export EDITOR="leafpad"
+export GIT_EDITOR="leafpad"
 export GIT_CONFIG_USERNAME="tunnckoCore"
 export GIT_CONFIG_USERMAIL="mameto_100@mail.bg"
 export GIT_CONFIG_TOKEN="`cat $HOME/.config/.github-token`"
@@ -76,7 +75,7 @@ PROMPT_NEWLINE=$'\n'
 PROMPT_LINE2='%B%(?.%F{green}%# ❯.%F{red}%# %? ❯)%f%b '
 PROMPT=$'%B%F{cyan}%~%f $(arcklyn_git_info) ${PROMPT_NEWLINE}${PROMPT_LINE2}%b'
 # RPROMPT=$'%B%F{blue} %f$(date +"%B %d") %F{blue} %f$(date +"%H:%M:%S")%b'
-RPROMPT=$'%B%F{blue} %f$(date +"%B %d, %H:%M:%S")%b'
+#orig: RPROMPT=$'%B%F{blue} %f$(date +"%B %d, %H:%M:%S")%b'
 
 # # Bindings
 bindkey "^[[3~" delete-char
