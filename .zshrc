@@ -1,7 +1,8 @@
 # ~/.zshrc, ZSH 5.2+
 # Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
 # Release under the MIT License, 2016
-alsi
+
+#alsi
 
 case $TERM in
     xterm*)
@@ -9,16 +10,33 @@ case $TERM in
     ;;
 esac
 
+
+#if [ -f ${HOME}/.keychain/${HOSTNAME}-sh ]; then
+#    source ${HOME}/.keychain/${HOSTNAME}-sh > /dev/null
+#fi
+
+#if [[ "$SSH_AGENT_PID" == "" ]]; then
+#  eval `keychain --eval --nogui /rage/.ssh/id_rsa`
+#fi
+
+
 # Exports
+export RAGE="/rage"
+export RAGE_NODEJS="$RAGE/.nodejs"
+export PATH="$RAGE_NODEJS/bin:$PATH"
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZFUNCS="$HOME/.config/zfuncs"
 export EDITOR="leafpad"
 export GIT_EDITOR="leafpad"
 export GIT_CONFIG_USERNAME="tunnckoCore"
-export GIT_CONFIG_USERMAIL="mameto_100@mail.bg"
-export GIT_CONFIG_TOKEN="`cat $HOME/.config/.github-token`"
-export GOPATH="$HOME/.golang"
-export PATH="$GOPATH/bin:$PATH"
+export GIT_CONFIG_USERMAIL="mameto2011@gmail.com"
+#export GIT_CONFIG_TOKEN="`cat $RAGE/.github-token`"
+#export GOPATH="$HOME/.golang"
+#export PATH="$GOPATH/bin:$PATH"
+
+export PYTHON=/usr/bin/python2
+
 
 # gitconfig
 git config --global user.name "$GIT_CONFIG_USERNAME"
@@ -43,10 +61,14 @@ setopt HIST_IGNORE_DUPS
 setopt extendedglob notify
 unsetopt beep
 
+# Plugins
+source $ZFUNCS/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Autoloads
 autoload -Uz compinit && compinit
 
 fpath=($ZFUNCS/arcklyn $fpath)
+fpath=($PATH $fpath)
 autoload -Uz $ZFUNCS/arcklyn/*(:t)
 
 # Enable auto-execution of functions.
@@ -102,9 +124,7 @@ zstyle ':completion:*' prompt 'ehh... error?!'
 zstyle ':completion:*' rehash true
 zstyle :compinstall filename "$HOME/.zshrc"
 
-# nvm, Nodejs
-export NVM_DIR="/home/charlike/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Aliases
 [ -s "$HOME/.aliases" ] && . "$HOME/.aliases"
+

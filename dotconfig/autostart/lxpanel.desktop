@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=LXPanel
-Comment=Custom LXPanel
-Keywords=shell;lx;lxpanel;lxde;
-TryExec=lxpanel
-Exec=lxpanel 
-Icon=utilities-terminal
-Type=Application
