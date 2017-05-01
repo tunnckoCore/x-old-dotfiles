@@ -11,3 +11,12 @@ Not so much.
 ***
 
 ![](./nodejs-asia-dot-js-rotated-tintpink-10percent-bluredges-hda-grunge-147613508369479.png)
+
+***
+
+![](./voalajs-effected-light.png)
+***
+
+![](./voalajs-text.png)
+
+![](./voalajs-morelight.png)
